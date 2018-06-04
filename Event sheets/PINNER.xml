@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PINNER</name>
+    <events>
+        <event-block sid="371906175295432">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="409405132398990" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="852097600973588" type="FIGHT">
+                    <param id="0" name="Pin to">Sprite2</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="634550662993480" type="Sprite4">
+                    <param id="0" name="Pin to">Sprite2</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

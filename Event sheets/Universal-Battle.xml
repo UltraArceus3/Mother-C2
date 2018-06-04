@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Universal-Battle</name>
+    <events>
+        <variable constant="0" name="TURN" sid="111640865819488" static="0" type="number">0</variable>
+        <include>PINNER</include>
+        <include>Player-Battle</include>
+        <include>Background</include>
+        <event-block sid="278610726369733">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="934657968204882" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="510789758973626" type="Text">
+                    <param id="0" name="Text">P1.At(0,0) &amp; newline &amp; &quot;HP - &quot; &amp; P1.At(0,1) &amp; newline &amp; &quot;FPS: &quot; &amp; fps</param>
+                </action>
+                <action disabled="1" id="-18" name="Rotate clockwise" sid="883918224219823" type="Sprite2">
+                    <param id="0" name="Degrees">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="105206535489652">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="307907246293525" type="CAMERA" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="826143446489928" type="CAMERA">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="174733614806984">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="796874285449076" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="340436760754825" type="Audio">
+                    <param id="0" name="Audio file">2 - Bothersome Guys</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

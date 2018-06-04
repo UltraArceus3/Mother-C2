@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Background</name>
+    <events>
+        <event-block sid="112216484189240">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="376510110703606" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="883586855149925">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="493884474669158" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Set sub-image offset and size" sid="391701068469176" type="SpriteSheet">
+                    <param id="0" name="offset x">SpriteSheet.offsetX-3</param>
+                    <param id="1" name="offset y">SpriteSheet.offsetY-3</param>
+                    <param id="2" name="sub width">SpriteSheet.SubWidth</param>
+                    <param id="3" name="sub height">SpriteSheet.SubHeight</param>
+                </action>
+                <action id="2" name="Set sub-image offset and size" sid="619470860394325" type="SpriteSheet3">
+                    <param id="0" name="offset x">SpriteSheet3.offsetX+3</param>
+                    <param id="1" name="offset y">SpriteSheet3.offsetY-3</param>
+                    <param id="2" name="sub width">SpriteSheet3.SubWidth</param>
+                    <param id="3" name="sub height">SpriteSheet3.SubHeight</param>
+                </action>
+                <action id="2" name="Set sub-image offset and size" sid="233348501403471" type="SpriteSheet2">
+                    <param id="0" name="offset x">SpriteSheet2.offsetX-2</param>
+                    <param id="1" name="offset y">SpriteSheet2.offsetY</param>
+                    <param id="2" name="sub width">SpriteSheet2.SubWidth</param>
+                    <param id="3" name="sub height">SpriteSheet2.SubHeight</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

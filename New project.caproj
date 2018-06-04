@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>29xr399584g2j</unique-id>
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="R0J0hound" id="rojo_spritesheet" version="1">Sprite sheet</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Brad Larson" id="bulge">Bulge</effect>
+        <effect author="Brad Larson" id="crystalball">Crystal Ball</effect>
+        <effect author="Scirra" id="multiply">Multiply</effect>
+        <effect author="Scirra" id="polarinvert">Polar invert</effect>
+        <effect author="Danguafer/Silexars" id="pulse">Pulse</effect>
+        <effect author="Scirra" id="warpripple">Warp Ripple</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">NW.js</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Background">
+            <object-type name="SpriteSheet" sid="125693219509835">
+                <plugin id="rojo_spritesheet" />
+                <effects>
+                    <effect-type name="Pulse">
+                        <effect id="pulse" />
+                    </effect-type>
+                    <effect-type name="CrystalBall">
+                        <effect id="crystalball" />
+                    </effect-type>
+                </effects>
+                <texture original-source="H:\Mother-C2\Textures\TiledBackground2.png" />
+            </object-type>
+            <object-type name="SpriteSheet2" sid="321219070957541">
+                <plugin id="rojo_spritesheet" />
+                <effects>
+                    <effect-type name="PolarInvert">
+                        <effect id="polarinvert" />
+                    </effect-type>
+                </effects>
+                <texture />
+            </object-type>
+            <object-type name="SpriteSheet3" sid="401652010200758">
+                <plugin id="rojo_spritesheet" />
+                <effects>
+                    <effect-type name="Pulse">
+                        <effect id="pulse" />
+                    </effect-type>
+                    <effect-type name="CrystalBall">
+                        <effect id="crystalball" />
+                    </effect-type>
+                </effects>
+                <texture original-source="H:\Mother-C2\Textures\TiledBackground2.png" />
+            </object-type>
+            <object-type name="TiledBackground" sid="476382651530491">
+                <plugin id="TiledBg" />
+                <effects>
+                    <effect-type name="Multiply">
+                        <effect id="multiply" />
+                    </effect-type>
+                    <effect-type name="WarpRipple">
+                        <effect id="warpripple" />
+                    </effect-type>
+                    <effect-type name="Bulge">
+                        <effect id="bulge" />
+                    </effect-type>
+                </effects>
+                <texture />
+            </object-type>
+        </object-folder>
+        <object-folder name="UI">
+            <object-type name="Sprite4" sid="914645401187155">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="487833903668995">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="669968821276045">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>Sprite2</type>
+                    <type>FIGHT</type>
+                    <type>Sprite4</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="804868958906099" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FIGHT" sid="980252322450689">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="531432886619802">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>Sprite2</type>
+                    <type>FIGHT</type>
+                    <type>Sprite4</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="735504167878964" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\Mother-C2\f.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Select" pingpong="0" repeatcount="1" repeatto="0" sid="998239777988919" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\Mother-C2\f.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Sprite" sid="830745341821040">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="562663949152461" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\Mother-C2\Untitled.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Text" sid="214929912478313">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Sprite2" sid="570611775292564">
+                <plugin id="Sprite" />
+                <container>
+                    <type>Sprite2</type>
+                    <type>FIGHT</type>
+                    <type>Sprite4</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818393409023740" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1.37671" original-source="D:\ui.png">
+                            <collision-poly>
+                                <point x="0.00155763" y="0.00684932" />
+                                <point x="0.998442" y="0.00684932" />
+                                <point x="0.507788" y="0.589041" />
+                                <point x="0.492212" y="0.589041" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="CAMERA" sid="494866883482408">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="799207868986649">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="229231971420917">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="250580124490743">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="410637114084564" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="EnemyBattle" sid="155282408178921">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="Keyboard" sid="108903257972232">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Sprite3" sid="466671834591257">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Name" sid="260695747717875" type="string" />
+                <instance-variable name="HP" sid="239555169393185" type="number" />
+                <instance-variable name="Attack" sid="414216748208014" type="number" />
+                <instance-variable name="Death" sid="952575354599514" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764624327374128" speed="5">
+                    <frame duration="1" hotspotX="0.671429" hotspotY="0.510345" original-source="H:\Mother-C2\en.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="111303391905909">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type global="1" name="P1" sid="719972493438196">
+            <plugin id="Arr" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="BattleButtons" plugin-id="Sprite" sid="990003021963795">
+            <members>
+                <member>FIGHT</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="ButtonID" sid="284725159648279" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="859902365063609">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Family1" plugin-id="Sprite" sid="650294013453204">
+            <members>
+                <member>FIGHT</member>
+                <member>Sprite2</member>
+                <member>Sprite4</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Background.xml</event-sheet>
+        <event-sheet>Universal-Battle.xml</event-sheet>
+        <event-sheet>Player-Battle.xml</event-sheet>
+        <event-sheet>Enemy-Battle.xml</event-sheet>
+        <event-sheet>PINNER.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="10" />
+        <global-instance type="Audio" uid="12">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder>
+        <file name="0 - Let&apos;s Begin!.ogg" />
+        <file name="1 - Enemy Encounter!.ogg" />
+        <file name="2 - Bothersome Guys.ogg" />
+        <file name="3 - You Won!.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file-folder name="Music" />
+    </files-folder>
+</c2project>

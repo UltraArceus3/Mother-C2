@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Player-Battle</name>
+    <events>
+        <comment bookmark="1">Player Arrays-&#x0D;&#x0A;&#x0D;&#x0A;0- Info&#x0D;&#x0A;&#x09;0- Name&#x0D;&#x0A;&#x09;1- HP&#x0D;&#x0A;1- Battle Stats&#x0D;&#x0A;&#x09;0- Damage Taken</comment>
+        <variable constant="0" name="SELECT" sid="468511488657434" static="0" type="number">0</variable>
+        <event-block sid="516030469565090">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="958655510867306" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set at XY" sid="909413135812432" type="P1">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">&quot;Ness&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="515749419061803" type="P1">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">255</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="543622469338063">
+            <conditions>
+                <condition id="1" name="Compare at XY" sid="216992429147428" type="P1">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Comparison">4</param>
+                    <param id="3" name="Value">0</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="609391121789384" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set at XY" sid="808100349166466" type="P1">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">P1.At(0, 1) - 1</param>
+                </action>
+                <action id="3" name="Set at XY" sid="615295383567566" type="P1">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">P1.At(1, 0) - 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="363494457491129">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="682452525736886" type="System">
+                    <param id="0" name="Variable">TURN</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="765060196222224">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="925536068780066" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="896483626220869" type="System">
+                            <param id="0" name="Variable">SELECT</param>
+                            <param id="1" name="Value">SELECT-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="668432740842990">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="734080890638486" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="281996214492736" type="System">
+                            <param id="0" name="Variable">SELECT</param>
+                            <param id="1" name="Value">SELECT+1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="371640041450221">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="941877493523341" type="Keyboard">
+                            <param id="0" name="Key">13 (Return)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="949942598180434">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="359255959189121" type="System">
+                                    <param id="0" name="Variable">SELECT</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-42" name="Signal" sid="979617086855743" type="System">
+                                    <param id="0" name="Tag">&quot;ATTACK&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="701436043738784">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="173974688853788" type="System">
+                    <param id="0" name="Variable">SELECT</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="940649427354107" type="System">
+                    <param id="0" name="Variable">SELECT</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="820364187591446">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="300671729407260" type="System">
+                    <param id="0" name="Variable">SELECT</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="333924336276099" type="System">
+                    <param id="0" name="Variable">SELECT</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="523828316948577">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="113387031845051" type="System" />
+            </conditions>
+            <actions>
+                <action id="-41" name="Wait for signal" sid="311796649883644" type="System">
+                    <param id="0" name="Tag">&quot;ATTACK&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="448342783555987" type="System">
+                    <param id="0" name="Variable">TURN</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="586956064796954">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="637637735835509" type="BattleButtons">
+                    <param id="0" name="Instance variable">ButtonID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">SELECT</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="472543174824365" type="BattleButtons">
+                    <param id="0" name="Animation">&quot;Select&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="962892275774408" type="BattleButtons">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="939478678382414">
+            <conditions>
+                <condition id="-22" name="Else" sid="987714325237028" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="0" name="Set active" sid="675476081270509" type="BattleButtons">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Sine" id="5" name="Set cycle position" sid="127524193566322" type="BattleButtons">
+                    <param id="0" name="Cycle position">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
