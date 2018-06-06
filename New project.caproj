@@ -257,10 +257,6 @@
             <members>
                 <member>TiledBackground</member>
             </members>
-            <instance-variables>
-                <instance-variable name="widthset" sid="711045473849249" type="number" />
-                <instance-variable name="heightset" sid="166329122688114" type="number" />
-            </instance-variables>
         </family>
         <family name="Background_Sheet" plugin-id="rojo_spritesheet" sid="426031923342738">
             <members>
@@ -268,10 +264,6 @@
                 <member>SpriteSheet2</member>
                 <member>SpriteSheet3</member>
             </members>
-            <instance-variables>
-                <instance-variable name="widthset" sid="401781975884155" type="number" />
-                <instance-variable name="heightset" sid="761127062418069" type="number" />
-            </instance-variables>
         </family>
     </families>
     <layout-folder>
@@ -287,8 +279,8 @@
         <event-sheet>Assest-Loader ES.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="10" />
-        <global-instance type="Audio" uid="12">
+        <global-instance type="Keyboard" uid="18" />
+        <global-instance type="Audio" uid="19">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>

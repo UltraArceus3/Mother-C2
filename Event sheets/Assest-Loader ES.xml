@@ -3,32 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Assest-Loader ES</name>
     <events>
-        <event-block sid="894296054527923">
-            <conditions>
-                <condition id="-18" name="On created" sid="863367315383477" type="Background_Sheet" />
-            </conditions>
-            <actions>
-                <action id="-5" name="Set width" sid="532903515317269" type="Background_Sheet">
-                    <param id="0" name="Width">self.widthset</param>
-                </action>
-                <action id="-6" name="Set height" sid="756933411640601" type="Background_Sheet">
-                    <param id="0" name="Height">self.heightset</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="591931508784862">
-            <conditions>
-                <condition id="-18" name="On created" sid="851895187940593" type="Background_Tile" />
-            </conditions>
-            <actions>
-                <action id="-5" name="Set width" sid="964064356017399" type="Background_Tile">
-                    <param id="0" name="Width">self.widthset</param>
-                </action>
-                <action id="-6" name="Set height" sid="439494311571596" type="Background_Tile">
-                    <param id="0" name="Height">self.heightset</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="749781798207565">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="337004707801210" type="System" />

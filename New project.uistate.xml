@@ -12,12 +12,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">Layout 1</layout>
         <layout order="6">Load_Assests</layout>
-        <event-sheet order="1">Background</event-sheet>
+        <event-sheet active="1" order="1">Background</event-sheet>
         <event-sheet order="2">Universal-Battle</event-sheet>
         <event-sheet order="3">Player-Battle</event-sheet>
         <event-sheet order="4">Enemy-Battle</event-sheet>
         <event-sheet order="5">PINNER</event-sheet>
-        <event-sheet active="1" order="7">Assest-Loader ES</event-sheet>
+        <event-sheet order="7">Assest-Loader ES</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -28,7 +28,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1">
         <family expanded="0" name="BattleButtons" />
         <family expanded="0" name="Family1" />
-        <family expanded="0" name="Background_Tile" />
+        <family expanded="1" name="Background_Tile" />
         <family expanded="1" name="Background_Sheet" />
     </families-expanded>
     <folders-expanded>
