@@ -3,36 +3,93 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Background</name>
     <events>
+        <variable constant="0" name="Background" sid="630814047730786" static="0" type="number">0</variable>
         <event-block sid="112216484189240">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="376510110703606" type="System" />
             </conditions>
-            <actions />
-        </event-block>
-        <event-block sid="883586855149925">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="493884474669158" type="System" />
-            </conditions>
             <actions>
-                <action id="2" name="Set sub-image offset and size" sid="391701068469176" type="SpriteSheet">
-                    <param id="0" name="offset x">SpriteSheet.offsetX-3</param>
-                    <param id="1" name="offset y">SpriteSheet.offsetY-3</param>
-                    <param id="2" name="sub width">SpriteSheet.SubWidth</param>
-                    <param id="3" name="sub height">SpriteSheet.SubHeight</param>
-                </action>
-                <action id="2" name="Set sub-image offset and size" sid="619470860394325" type="SpriteSheet3">
-                    <param id="0" name="offset x">SpriteSheet3.offsetX+3</param>
-                    <param id="1" name="offset y">SpriteSheet3.offsetY-3</param>
-                    <param id="2" name="sub width">SpriteSheet3.SubWidth</param>
-                    <param id="3" name="sub height">SpriteSheet3.SubHeight</param>
-                </action>
-                <action id="2" name="Set sub-image offset and size" sid="233348501403471" type="SpriteSheet2">
-                    <param id="0" name="offset x">SpriteSheet2.offsetX-2</param>
-                    <param id="1" name="offset y">SpriteSheet2.offsetY</param>
-                    <param id="2" name="sub width">SpriteSheet2.SubWidth</param>
-                    <param id="3" name="sub height">SpriteSheet2.SubHeight</param>
-                </action>
+                <action id="-9" name="Destroy" sid="103583053646284" type="Background_Sheet" />
+                <action id="-9" name="Destroy" sid="444783491571478" type="Background_Tile" />
             </actions>
+        </event-block>
+        <event-block sid="484882440555587">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="165996477805089" type="System">
+                    <param id="0" name="Variable">Background</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="102813044019969">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="993725412549018" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="299759707923664" type="System">
+                            <param id="0" name="Object to create">SpriteSheet</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">417.5</param>
+                            <param id="3" name="Y">234</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="178966986563429" type="System">
+                            <param id="0" name="Object to create">SpriteSheet2</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">-64</param>
+                            <param id="3" name="Y">-29</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="314085496755721" type="System">
+                            <param id="0" name="Object to create">SpriteSheet3</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">417.5</param>
+                            <param id="3" name="Y">234</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="594639685898860" type="System">
+                            <param id="0" name="Object to create">TiledBackground</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">-83</param>
+                            <param id="3" name="Y">-9.005</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="883586855149925">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="493884474669158" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set sub-image offset and size" sid="391701068469176" type="SpriteSheet">
+                            <param id="0" name="offset x">SpriteSheet.offsetX-3</param>
+                            <param id="1" name="offset y">SpriteSheet.offsetY-3</param>
+                            <param id="2" name="sub width">SpriteSheet.SubWidth</param>
+                            <param id="3" name="sub height">SpriteSheet.SubHeight</param>
+                        </action>
+                        <action id="2" name="Set sub-image offset and size" sid="619470860394325" type="SpriteSheet3">
+                            <param id="0" name="offset x">SpriteSheet3.offsetX+3</param>
+                            <param id="1" name="offset y">SpriteSheet3.offsetY-3</param>
+                            <param id="2" name="sub width">SpriteSheet3.SubWidth</param>
+                            <param id="3" name="sub height">SpriteSheet3.SubHeight</param>
+                        </action>
+                        <action id="2" name="Set sub-image offset and size" sid="233348501403471" type="SpriteSheet2">
+                            <param id="0" name="offset x">SpriteSheet2.offsetX-2</param>
+                            <param id="1" name="offset y">SpriteSheet2.offsetY</param>
+                            <param id="2" name="sub width">SpriteSheet2.SubWidth</param>
+                            <param id="3" name="sub height">SpriteSheet2.SubHeight</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="292513678756105">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="473518596375058" type="System">
+                    <param id="0" name="Variable">Background</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

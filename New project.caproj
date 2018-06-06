@@ -48,7 +48,7 @@
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
-        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Loader style">Nothing (not recommended)</prop>
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
@@ -228,6 +228,9 @@
         <object-type global="1" name="P1" sid="719972493438196">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="LoadProgressText" sid="818835270734579">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="BattleButtons" plugin-id="Sprite" sid="990003021963795">
@@ -250,9 +253,30 @@
                 <member>Sprite4</member>
             </members>
         </family>
+        <family name="Background_Tile" plugin-id="TiledBg" sid="696863926193463">
+            <members>
+                <member>TiledBackground</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="widthset" sid="711045473849249" type="number" />
+                <instance-variable name="heightset" sid="166329122688114" type="number" />
+            </instance-variables>
+        </family>
+        <family name="Background_Sheet" plugin-id="rojo_spritesheet" sid="426031923342738">
+            <members>
+                <member>SpriteSheet</member>
+                <member>SpriteSheet2</member>
+                <member>SpriteSheet3</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="widthset" sid="401781975884155" type="number" />
+                <instance-variable name="heightset" sid="761127062418069" type="number" />
+            </instance-variables>
+        </family>
     </families>
     <layout-folder>
         <layout>Layout 1.xml</layout>
+        <layout>Load_Assests.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Background.xml</event-sheet>
@@ -260,6 +284,7 @@
         <event-sheet>Player-Battle.xml</event-sheet>
         <event-sheet>Enemy-Battle.xml</event-sheet>
         <event-sheet>PINNER.xml</event-sheet>
+        <event-sheet>Assest-Loader ES.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="10" />
