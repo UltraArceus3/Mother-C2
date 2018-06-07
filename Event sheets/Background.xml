@@ -11,7 +11,7 @@
                 <condition id="-14" name="Compare variable" sid="795672052620534" type="System">
                     <param id="0" name="Variable">debug</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -33,6 +33,11 @@
                 <event-block sid="102813044019969">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="993725412549018" type="System" />
+                        <condition id="-14" name="Compare variable" sid="869621647279233" type="System">
+                            <param id="0" name="Variable">debug</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="299759707923664" type="System">
@@ -101,6 +106,11 @@
                 <event-block sid="937088968332191">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="621086241236371" type="System" />
+                        <condition id="-14" name="Compare variable" sid="747054933917352" type="System">
+                            <param id="0" name="Variable">debug</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="867404031469149" type="System">

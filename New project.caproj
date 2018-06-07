@@ -220,7 +220,7 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764624327374128" speed="5">
-                    <frame duration="1" hotspotX="0.671429" hotspotY="0.510345" original-source="H:\Mother-C2\en.png" />
+                    <frame duration="1" hotspotX="0.466809" hotspotY="0.606796" original-source="C:\Users\ranyk\Pictures\test1trans.jpg" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -301,6 +301,7 @@
         <family name="Background_Sprite" plugin-id="Sprite" sid="350155702550780">
             <members>
                 <member>Sprite3</member>
+                <member>Sprite5</member>
             </members>
         </family>
     </families>

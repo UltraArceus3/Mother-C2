@@ -234,6 +234,40 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Sprite5" uid="21">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <effect-instances>
+                        <effect-instance type="Warp">
+                            <parameters>
+                                <x-amplitude>200</x-amplitude>
+                                <x-frequency>100</x-frequency>
+                                <x-speed>20</x-speed>
+                                <y-amplitude>200</y-amplitude>
+                                <y-frequency>100</y-frequency>
+                                <y-speed>20</y-speed>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>1</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2127</x>
+                        <y>-191</y>
+                        <z>0</z>
+                        <width>850</width>
+                        <height>476</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
