@@ -58,7 +58,7 @@
                         <Name>Test Enemy</Name>
                         <HP>200</HP>
                         <Attack>20</Attack>
-                        <Death>0</Death>
+                        <DeathType>0</DeathType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

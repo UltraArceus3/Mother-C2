@@ -215,7 +215,7 @@
                 <instance-variable name="Name" sid="260695747717875" type="string" />
                 <instance-variable name="HP" sid="239555169393185" type="number" />
                 <instance-variable name="Attack" sid="414216748208014" type="number" />
-                <instance-variable name="Death" sid="952575354599514" type="number" />
+                <instance-variable name="DeathType" sid="952575354599514" type="number" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764624327374128" speed="5">
