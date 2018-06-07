@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Layout 1</name>
+    <name>Battle</name>
     <sid>390230117878083</sid>
     <event-sheet>Universal-Battle</event-sheet>
     <size>

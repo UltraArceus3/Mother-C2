@@ -268,7 +268,7 @@
         </family>
     </families>
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>Battle.xml</layout>
         <layout>Load_Assests.xml</layout>
     </layout-folder>
     <event-folder>

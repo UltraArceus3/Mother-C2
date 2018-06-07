@@ -42,7 +42,7 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="644775252036379" type="System">
-                    <param id="0" name="Layout">Layout 1</param>
+                    <param id="0" name="Layout">Battle</param>
                 </action>
             </actions>
         </event-block>
