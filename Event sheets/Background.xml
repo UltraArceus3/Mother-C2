@@ -3,15 +3,21 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Background</name>
     <events>
-        <variable constant="0" name="debug" sid="543853113437847" static="0" type="number">1</variable>
+        <variable constant="0" name="debug" sid="543853113437847" static="0" type="number">0</variable>
         <variable constant="0" name="Background" sid="630814047730786" static="0" type="number">1</variable>
         <event-block sid="112216484189240">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="376510110703606" type="System" />
+                <condition id="-14" name="Compare variable" sid="795672052620534" type="System">
+                    <param id="0" name="Variable">debug</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="103583053646284" type="Background_Sheet" />
                 <action id="-9" name="Destroy" sid="444783491571478" type="Background_Tile" />
+                <action id="-9" name="Destroy" sid="790187873844108" type="Background_Sprite" />
             </actions>
         </event-block>
         <event-block sid="484882440555587">
@@ -35,17 +41,17 @@
                             <param id="2" name="X">417.5</param>
                             <param id="3" name="Y">234</param>
                         </action>
-                        <action id="-3" name="Create object" sid="178966986563429" type="System">
-                            <param id="0" name="Object to create">SpriteSheet2</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">-64</param>
-                            <param id="3" name="Y">-29</param>
-                        </action>
                         <action id="-3" name="Create object" sid="314085496755721" type="System">
                             <param id="0" name="Object to create">SpriteSheet3</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">417.5</param>
                             <param id="3" name="Y">234</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="178966986563429" type="System">
+                            <param id="0" name="Object to create">SpriteSheet2</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">-64</param>
+                            <param id="3" name="Y">-29</param>
                         </action>
                         <action id="-3" name="Create object" sid="594639685898860" type="System">
                             <param id="0" name="Object to create">TiledBackground</param>
@@ -91,6 +97,44 @@
                 </condition>
             </conditions>
             <actions />
+            <sub-events>
+                <event-block sid="937088968332191">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="621086241236371" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="867404031469149" type="System">
+                            <param id="0" name="Object to create">TiledBackground2</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="239123842578628" type="System">
+                            <param id="0" name="Object to create">Sprite5</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">427</param>
+                            <param id="3" name="Y">240</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="432249061857012" type="System">
+                            <param id="0" name="Object to create">Sprite3</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">427</param>
+                            <param id="3" name="Y">240</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="344532828217077">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="585663794876367" type="System" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-7" name="Set size" sid="866662154911908" type="Sprite5">
+                            <param id="0" name="Width">self.Width-1.79</param>
+                            <param id="1" name="Height">self.Height-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="218621877763839">
             <conditions>

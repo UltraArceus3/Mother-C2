@@ -30,6 +30,7 @@
         <effect author="Scirra" id="multiply">Multiply</effect>
         <effect author="Scirra" id="polarinvert">Polar invert</effect>
         <effect author="Danguafer/Silexars" id="pulse">Pulse</effect>
+        <effect author="Scirra" id="warp">Warp</effect>
         <effect author="Scirra" id="warpripple">Warp Ripple</effect>
     </used-effects>
     <configurations>
@@ -232,6 +233,36 @@
         <object-type name="LoadProgressText" sid="818835270734579">
             <plugin id="Text" />
         </object-type>
+        <object-type name="TiledBackground2" sid="585717640285028">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite3" sid="946068299566454">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Pulse">
+                    <effect id="pulse" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="225778835737899" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\Background.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="555294576211992">
+            <plugin id="Sprite" />
+            <effects>
+                <effect-type name="Warp">
+                    <effect id="warp" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="596380717459770" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\frame.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="BattleButtons" plugin-id="Sprite" sid="990003021963795">
@@ -257,6 +288,7 @@
         <family name="Background_Tile" plugin-id="TiledBg" sid="696863926193463">
             <members>
                 <member>TiledBackground</member>
+                <member>TiledBackground2</member>
             </members>
         </family>
         <family name="Background_Sheet" plugin-id="rojo_spritesheet" sid="426031923342738">
@@ -264,6 +296,11 @@
                 <member>SpriteSheet</member>
                 <member>SpriteSheet2</member>
                 <member>SpriteSheet3</member>
+            </members>
+        </family>
+        <family name="Background_Sprite" plugin-id="Sprite" sid="350155702550780">
+            <members>
+                <member>Sprite3</member>
             </members>
         </family>
     </families>
