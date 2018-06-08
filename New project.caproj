@@ -19,9 +19,9 @@
         <plugin author="R0J0hound" id="rojo_spritesheet" version="1">Sprite sheet</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
     <used-effects>
@@ -134,11 +134,6 @@
             </object-type>
             <object-type name="FIGHT" sid="980252322450689">
                 <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="531432886619802">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
                 <container>
                     <type>Sprite2</type>
                     <type>FIGHT</type>
@@ -146,7 +141,7 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="735504167878964" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\Mother-C2\f.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\f.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Select" pingpong="0" repeatcount="1" repeatto="0" sid="998239777988919" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\Mother-C2\f.png" />
@@ -184,6 +179,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="PSI" sid="281552927031432">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="943790807640140">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="427713617051327" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\psi.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Select" pingpong="0" repeatcount="1" repeatto="0" sid="399861104405137" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="CAMERA" sid="494866883482408">
             <plugin id="Sprite" />
@@ -193,9 +204,6 @@
                 </behavior-type>
                 <behavior-type name="Sine" sid="229231971420917">
                     <behavior id="Sin" />
-                </behavior-type>
-                <behavior-type name="8Direction" sid="250580124490743">
-                    <behavior id="EightDir" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -263,11 +271,15 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Text2" sid="750342573819618">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families>
         <family name="BattleButtons" plugin-id="Sprite" sid="990003021963795">
             <members>
                 <member>FIGHT</member>
+                <member>PSI</member>
             </members>
             <instance-variables>
                 <instance-variable name="ButtonID" sid="284725159648279" type="number" />
@@ -276,11 +288,18 @@
                 <behavior-type name="Sine" sid="859902365063609">
                     <behavior id="Sin" />
                 </behavior-type>
+                <behavior-type name="LiteTween" sid="886714154191902">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+                <behavior-type name="Pin2UI" sid="345907639359814">
+                    <behavior id="Pin" />
+                </behavior-type>
             </behaviors>
         </family>
         <family name="Family1" plugin-id="Sprite" sid="650294013453204">
             <members>
                 <member>FIGHT</member>
+                <member>PSI</member>
                 <member>Sprite2</member>
                 <member>Sprite4</member>
             </members>

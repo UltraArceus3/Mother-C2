@@ -8,7 +8,7 @@
                 <condition id="-2" name="On start of layout" sid="409405132398990" type="System" />
             </conditions>
             <actions>
-                <action behavior="Pin" id="0" name="Pin to object" sid="852097600973588" type="FIGHT">
+                <action behavior="Pin2UI" id="0" name="Pin to object" sid="464905666826788" type="BattleButtons">
                     <param id="0" name="Pin to">Sprite2</param>
                     <param id="1" name="Mode">0</param>
                 </action>
