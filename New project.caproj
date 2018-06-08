@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -195,6 +196,22 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="RUN" sid="135001698300737">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="153154846798944">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="801583587287436" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\run.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Select" pingpong="0" repeatcount="1" repeatto="0" sid="697024878623772" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="CAMERA" sid="494866883482408">
             <plugin id="Sprite" />
@@ -274,15 +291,23 @@
         <object-type name="Text2" sid="750342573819618">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Browser" sid="748945763486434">
+            <plugin id="Browser" />
+        </object-type>
     </object-folder>
     <families>
         <family name="BattleButtons" plugin-id="Sprite" sid="990003021963795">
             <members>
                 <member>FIGHT</member>
                 <member>PSI</member>
+                <member>RUN</member>
             </members>
             <instance-variables>
                 <instance-variable name="ButtonID" sid="284725159648279" type="number" />
+                <instance-variable name="Name" sid="377538906621707" type="string" />
+                <instance-variable name="R" sid="386975823940939" type="string" />
+                <instance-variable name="G" sid="925701925389377" type="number" />
+                <instance-variable name="B" sid="341339747312383" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Sine" sid="859902365063609">
@@ -300,6 +325,7 @@
             <members>
                 <member>FIGHT</member>
                 <member>PSI</member>
+                <member>RUN</member>
                 <member>Sprite2</member>
                 <member>Sprite4</member>
             </members>
@@ -352,6 +378,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="Browser" uid="25" />
     </global-instances>
     <sounds-folder />
     <music-folder>

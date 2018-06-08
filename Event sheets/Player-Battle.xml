@@ -120,7 +120,7 @@
             <actions>
                 <action id="-9" name="Set value" sid="940649427354107" type="System">
                     <param id="0" name="Variable">SELECT</param>
-                    <param id="1" name="Value">1</param>
+                    <param id="1" name="Value">2</param>
                 </action>
             </actions>
         </event-block>
@@ -129,7 +129,7 @@
                 <condition id="-14" name="Compare variable" sid="300671729407260" type="System">
                     <param id="0" name="Variable">SELECT</param>
                     <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">1</param>
+                    <param id="2" name="Value">2</param>
                 </condition>
             </conditions>
             <actions>
@@ -147,35 +147,18 @@
             <sub-events>
                 <event-block sid="980472165205181">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="291229432860246" type="System">
-                            <param id="0" name="Variable">SELECT</param>
+                        <condition id="-7" name="Compare instance variable" sid="291229432860246" type="BattleButtons">
+                            <param id="0" name="Instance variable">ButtonID</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="2" name="Value">SELECT</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="183525860841954" type="Text2">
-                            <param id="0" name="Text">&quot;FIGHT&quot;</param>
+                            <param id="0" name="Text">BattleButtons.Name</param>
                         </action>
                         <action id="4" name="Set font color" sid="232223208165996" type="Text2">
-                            <param id="0" name="Color">rgb(255, 0, 0)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="553203602669781">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="148843200006943" type="System">
-                            <param id="0" name="Variable">SELECT</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="213418230155975" type="Text2">
-                            <param id="0" name="Text">&quot;PSI&quot;</param>
-                        </action>
-                        <action id="4" name="Set font color" sid="362335184691662" type="Text2">
-                            <param id="0" name="Color">rgb(0, 0, 255)</param>
+                            <param id="0" name="Color">rgb(int(BattleButtons.R), int(BattleButtons.G), int(BattleButtons.B))</param>
                         </action>
                     </actions>
                 </event-block>
@@ -306,6 +289,41 @@
                             <param id="1" name="Force use current">0</param>
                         </action>
                         <action behavior="Pin2UI" id="0" name="Pin to object" sid="333372531636414" type="BattleButtons">
+                            <param id="0" name="Pin to">Sprite2</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="558608415420897">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="520227730950781" type="BattleButtons">
+                            <param id="0" name="Instance variable">ButtonID</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">SELECT-1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="134823914491642" type="BattleButtons">
+                            <param id="0" name="Instance variable">ButtonID</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">SELECT+1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin2UI" id="1" name="Unpin" sid="317583463449633" type="BattleButtons" />
+                        <action behavior="LiteTween" id="3" name="Set target" sid="229564257548099" type="BattleButtons">
+                            <param id="0" name="Target is">0</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">418</param>
+                        </action>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="656364372764224" type="BattleButtons">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">-33</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="290744466074342" type="BattleButtons">
+                            <param id="0" name="Start Mode">1</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                        <action behavior="Pin2UI" id="0" name="Pin to object" sid="505598054166150" type="BattleButtons">
                             <param id="0" name="Pin to">Sprite2</param>
                             <param id="1" name="Mode">0</param>
                         </action>
