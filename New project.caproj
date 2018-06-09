@@ -247,6 +247,9 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764624327374128" speed="5">
                     <frame duration="1" hotspotX="0.466809" hotspotY="0.606796" original-source="C:\Users\ranyk\Pictures\test1trans.jpg" />
                 </animation>
+                <animation framecount="1" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="245327181813684" speed="5">
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.528249" original-source="C:\Users\ranyk\Pictures\test1trans1.jpg" />
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Audio" sid="111303391905909">
