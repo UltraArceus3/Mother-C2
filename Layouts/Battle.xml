@@ -144,9 +144,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Name>Test Enemy</Name>
-                        <HP>200</HP>
-                        <Attack>20</Attack>
+                        <Name>Test_Enemy</Name>
+                        <HP>0</HP>
+                        <Attack>0</Attack>
                         <DeathType>0</DeathType>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -183,18 +183,31 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Sprite2" uid="14">
+                <instance type="UIBackground" uid="14">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="LiteTween">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <tweened-property>Position</tweened-property>
+                                <function>Linear</function>
+                                <target>426.422, 49.04</target>
+                                <target-mode>Absolute</target-mode>
+                                <duration>0.001</duration>
+                                <enforce-mode>Enforce</enforce-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>426.422027588</x>
-                        <y>158.039550781</y>
+                        <x>426.42199707</x>
+                        <y>158.039993286</y>
                         <z>0</z>
                         <width>922.773681641</width>
                         <height>116.247634888</height>
@@ -205,7 +218,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite" uid="6">
+                <instance type="PlayerDataUI" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -227,7 +240,7 @@
                         <opacity>0.75</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="5">
+                <instance type="PlayerData" uid="5">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -289,11 +302,11 @@
                                 <function>Linear</function>
                                 <target>417, 34</target>
                                 <target-mode>Absolute</target-mode>
-                                <duration>0.7</duration>
+                                <duration>0.1</duration>
                                 <enforce-mode>Enforce</enforce-mode>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin2UI" />
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -303,44 +316,6 @@
                         <z>0</z>
                         <width>52.799015045</width>
                         <height>56.303375244</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite4" uid="13">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Vertical</movement>
-                                <wave>Square</wave>
-                                <period>0.5</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>2</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>418.69909668</x>
-                        <y>80.172195435</y>
-                        <z>0</z>
-                        <width>39.029571533</width>
-                        <height>17.392990112</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -383,11 +358,10 @@
                                 <function>Linear</function>
                                 <target>815, 56</target>
                                 <target-mode>Absolute</target-mode>
-                                <duration>0.7</duration>
+                                <duration>0.1</duration>
                                 <enforce-mode>Enforce</enforce-mode>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin2UI" />
                         <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
@@ -405,7 +379,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text2" uid="23">
+                <instance type="ButtonNameDisplay" uid="23">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -417,6 +391,9 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -467,11 +444,10 @@
                                 <function>Linear</function>
                                 <target>815, 56</target>
                                 <target-mode>Absolute</target-mode>
-                                <duration>0.7</duration>
+                                <duration>0.1</duration>
                                 <enforce-mode>Enforce</enforce-mode>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin2UI" />
                         <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
@@ -489,13 +465,62 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="BattleTextUI" uid="27">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>430</x>
+                        <y>36</y>
+                        <z>0</z>
+                        <width>421.710998535</width>
+                        <height>63.256999969</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BattleText" uid="13">
+                    <properties>
+                        <text>&quot;&quot; Appeared!</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Candara,-30.4,700,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>430</x>
+                        <y>36</y>
+                        <z>0</z>
+                        <width>421.710784912</width>
+                        <height>63.256622314</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
         <layer name="CAMERA" sid="114792615309911">
             <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
+            <background-color>0,0,0</background-color>
+            <transparent>0</transparent>
             <parallax>
                 <x>1</x>
                 <y>1</y>

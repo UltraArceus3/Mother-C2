@@ -15,9 +15,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="1">Background</event-sheet>
         <event-sheet order="2">Universal-Battle</event-sheet>
         <event-sheet order="3">Player-Battle</event-sheet>
-        <event-sheet order="4">Enemy-Battle</event-sheet>
-        <event-sheet order="5">PINNER</event-sheet>
+        <event-sheet order="4">PINNER</event-sheet>
         <event-sheet order="7">Assest-Loader ES</event-sheet>
+        <event-sheet order="5">Enemy-Battle</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -26,16 +26,21 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
-        <family expanded="1" name="BattleButtons" />
-        <family expanded="0" name="Family1" />
+        <family expanded="0" name="BattleButtons" />
+        <family expanded="0" name="BattleUI" />
         <family expanded="0" name="Background_Tile" />
         <family expanded="0" name="Background_Sheet" />
         <family expanded="0" name="Background_Sprite" />
+        <family expanded="0" name="Enemies_BATTLE" />
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/Background/" />
-        <folder expanded="1" path="object-folder/UI/" />
+        <folder expanded="0" path="object-folder/Background/" />
+        <folder expanded="0" path="object-folder/Background/Back1/" />
+        <folder expanded="0" path="object-folder/Background/Back2/" />
+        <folder expanded="0" path="object-folder/UI/" />
+        <folder expanded="0" path="object-folder/UI/Buttons/" />
+        <folder expanded="0" path="object-folder/System/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="0" path="file-folder/" />
@@ -43,15 +48,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="file-folder/Music/" />
-        <folder expanded="1" path="animation-folder/Sprite4/" />
-        <folder expanded="1" path="animation-folder/FIGHT/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
-        <folder expanded="1" path="animation-folder/Sprite2/" />
-        <folder expanded="1" path="animation-folder/PSI/" />
-        <folder expanded="1" path="animation-folder/RUN/" />
-        <folder expanded="1" path="animation-folder/CAMERA/" />
-        <folder expanded="1" path="animation-folder/EnemyTest/" />
         <folder expanded="1" path="animation-folder/Sprite3/" />
         <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/FIGHT/" />
+        <folder expanded="1" path="animation-folder/PSI/" />
+        <folder expanded="1" path="animation-folder/RUN/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/PlayerDataUI/" />
+        <folder expanded="1" path="animation-folder/UIBackground/" />
+        <folder expanded="1" path="animation-folder/BattleTextUI/" />
+        <folder expanded="1" path="animation-folder/CAMERA/" />
+        <folder expanded="1" path="animation-folder/EnemyTest/" />
     </folders-expanded>
 </c2uistate>

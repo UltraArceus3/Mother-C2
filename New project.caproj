@@ -62,56 +62,133 @@
     </configuration-settings>
     <object-folder>
         <object-folder name="Background">
-            <object-type name="SpriteSheet" sid="125693219509835">
-                <plugin id="rojo_spritesheet" />
-                <effects>
-                    <effect-type name="Pulse">
-                        <effect id="pulse" />
-                    </effect-type>
-                    <effect-type name="CrystalBall">
-                        <effect id="crystalball" />
-                    </effect-type>
-                </effects>
-                <texture original-source="H:\Mother-C2\Textures\TiledBackground2.png" />
-            </object-type>
-            <object-type name="SpriteSheet2" sid="321219070957541">
-                <plugin id="rojo_spritesheet" />
-                <effects>
-                    <effect-type name="PolarInvert">
-                        <effect id="polarinvert" />
-                    </effect-type>
-                </effects>
-                <texture />
-            </object-type>
-            <object-type name="SpriteSheet3" sid="401652010200758">
-                <plugin id="rojo_spritesheet" />
-                <effects>
-                    <effect-type name="Pulse">
-                        <effect id="pulse" />
-                    </effect-type>
-                    <effect-type name="CrystalBall">
-                        <effect id="crystalball" />
-                    </effect-type>
-                </effects>
-                <texture original-source="H:\Mother-C2\Textures\TiledBackground2.png" />
-            </object-type>
-            <object-type name="TiledBackground" sid="476382651530491">
-                <plugin id="TiledBg" />
-                <effects>
-                    <effect-type name="Multiply">
-                        <effect id="multiply" />
-                    </effect-type>
-                    <effect-type name="WarpRipple">
-                        <effect id="warpripple" />
-                    </effect-type>
-                    <effect-type name="Bulge">
-                        <effect id="bulge" />
-                    </effect-type>
-                </effects>
-                <texture />
-            </object-type>
+            <object-folder name="Back1">
+                <object-type name="SpriteSheet" sid="125693219509835">
+                    <plugin id="rojo_spritesheet" />
+                    <effects>
+                        <effect-type name="Pulse">
+                            <effect id="pulse" />
+                        </effect-type>
+                        <effect-type name="CrystalBall">
+                            <effect id="crystalball" />
+                        </effect-type>
+                    </effects>
+                    <texture original-source="H:\Mother-C2\Textures\TiledBackground2.png" />
+                </object-type>
+                <object-type name="SpriteSheet2" sid="321219070957541">
+                    <plugin id="rojo_spritesheet" />
+                    <effects>
+                        <effect-type name="PolarInvert">
+                            <effect id="polarinvert" />
+                        </effect-type>
+                    </effects>
+                    <texture />
+                </object-type>
+                <object-type name="SpriteSheet3" sid="401652010200758">
+                    <plugin id="rojo_spritesheet" />
+                    <effects>
+                        <effect-type name="Pulse">
+                            <effect id="pulse" />
+                        </effect-type>
+                        <effect-type name="CrystalBall">
+                            <effect id="crystalball" />
+                        </effect-type>
+                    </effects>
+                    <texture original-source="H:\Mother-C2\Textures\TiledBackground2.png" />
+                </object-type>
+                <object-type name="TiledBackground" sid="476382651530491">
+                    <plugin id="TiledBg" />
+                    <effects>
+                        <effect-type name="Multiply">
+                            <effect id="multiply" />
+                        </effect-type>
+                        <effect-type name="WarpRipple">
+                            <effect id="warpripple" />
+                        </effect-type>
+                        <effect-type name="Bulge">
+                            <effect id="bulge" />
+                        </effect-type>
+                    </effects>
+                    <texture />
+                </object-type>
+            </object-folder>
+            <object-folder name="Back2">
+                <object-type name="Sprite3" sid="946068299566454">
+                    <plugin id="Sprite" />
+                    <effects>
+                        <effect-type name="Pulse">
+                            <effect id="pulse" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="225778835737899" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\Background.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite5" sid="555294576211992">
+                    <plugin id="Sprite" />
+                    <effects>
+                        <effect-type name="Warp">
+                            <effect id="warp" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="596380717459770" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\frame.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TiledBackground2" sid="585717640285028">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+            </object-folder>
         </object-folder>
         <object-folder name="UI">
+            <object-folder name="Buttons">
+                <object-type name="FIGHT" sid="980252322450689">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="735504167878964" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\f.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Select" pingpong="0" repeatcount="1" repeatto="0" sid="998239777988919" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\Mother-C2\f.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="PSI" sid="281552927031432">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="427713617051327" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\psi.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Select" pingpong="0" repeatcount="1" repeatto="0" sid="399861104405137" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="RUN" sid="135001698300737">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="801583587287436" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\run.png" />
+                        </animation>
+                        <animation framecount="1" loop="0" name="Select" pingpong="0" repeatcount="1" repeatto="0" sid="697024878623772" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ButtonNameDisplay" sid="750342573819618">
+                    <plugin id="Text" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="554825815905952">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+            </object-folder>
             <object-type name="Sprite4" sid="914645401187155">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -122,34 +199,13 @@
                         <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
-                <container>
-                    <type>Sprite2</type>
-                    <type>FIGHT</type>
-                    <type>Sprite4</type>
-                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="804868958906099" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="FIGHT" sid="980252322450689">
-                <plugin id="Sprite" />
-                <container>
-                    <type>Sprite2</type>
-                    <type>FIGHT</type>
-                    <type>Sprite4</type>
-                </container>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="735504167878964" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\f.png" />
-                    </animation>
-                    <animation framecount="1" loop="0" name="Select" pingpong="0" repeatcount="1" repeatto="0" sid="998239777988919" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\Mother-C2\f.png" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Sprite" sid="830745341821040">
+            <object-type name="PlayerDataUI" sid="830745341821040">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="562663949152461" speed="5">
@@ -157,16 +213,16 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Text" sid="214929912478313">
+            <object-type name="PlayerData" sid="214929912478313">
                 <plugin id="Text" />
             </object-type>
-            <object-type name="Sprite2" sid="570611775292564">
+            <object-type name="UIBackground" sid="570611775292564">
                 <plugin id="Sprite" />
-                <container>
-                    <type>Sprite2</type>
-                    <type>FIGHT</type>
-                    <type>Sprite4</type>
-                </container>
+                <behaviors>
+                    <behavior-type name="LiteTween" sid="533181244678255">
+                        <behavior id="lunarray_LiteTween" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="818393409023740" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1.37671" original-source="D:\ui.png">
@@ -180,37 +236,27 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="PSI" sid="281552927031432">
+            <object-type name="BattleTextUI" sid="333369239933915">
                 <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="943790807640140">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="427713617051327" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\psi.png" />
-                    </animation>
-                    <animation framecount="1" loop="0" name="Select" pingpong="0" repeatcount="1" repeatto="0" sid="399861104405137" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="154953989748301" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="H:\Mother-C2\Untitled.png" />
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="RUN" sid="135001698300737">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="153154846798944">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="801583587287436" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\run.png" />
-                    </animation>
-                    <animation framecount="1" loop="0" name="Select" pingpong="0" repeatcount="1" repeatto="0" sid="697024878623772" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
+            <object-type name="BattleText" sid="789200244050127">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-folder name="System">
+            <object-type name="Browser" sid="748945763486434">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Audio" sid="111303391905909">
+                <plugin id="Audio" />
+            </object-type>
+            <object-type name="Keyboard" sid="108903257972232">
+                <plugin id="Keyboard" />
             </object-type>
         </object-folder>
         <object-type name="CAMERA" sid="494866883482408">
@@ -232,17 +278,8 @@
         <object-type global="1" name="EnemyBattle" sid="155282408178921">
             <plugin id="Arr" />
         </object-type>
-        <object-type name="Keyboard" sid="108903257972232">
-            <plugin id="Keyboard" />
-        </object-type>
         <object-type name="EnemyTest" sid="466671834591257">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Name" sid="260695747717875" type="string" />
-                <instance-variable name="HP" sid="239555169393185" type="number" />
-                <instance-variable name="Attack" sid="414216748208014" type="number" />
-                <instance-variable name="DeathType" sid="952575354599514" type="number" />
-            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764624327374128" speed="5">
                     <frame duration="1" hotspotX="0.466809" hotspotY="0.606796" original-source="C:\Users\ranyk\Pictures\test1trans.jpg" />
@@ -252,50 +289,11 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Audio" sid="111303391905909">
-            <plugin id="Audio" />
-        </object-type>
         <object-type global="1" name="P1" sid="719972493438196">
             <plugin id="Arr" />
         </object-type>
         <object-type name="LoadProgressText" sid="818835270734579">
             <plugin id="Text" />
-        </object-type>
-        <object-type name="TiledBackground2" sid="585717640285028">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="Sprite3" sid="946068299566454">
-            <plugin id="Sprite" />
-            <effects>
-                <effect-type name="Pulse">
-                    <effect id="pulse" />
-                </effect-type>
-            </effects>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="225778835737899" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\Background.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite5" sid="555294576211992">
-            <plugin id="Sprite" />
-            <effects>
-                <effect-type name="Warp">
-                    <effect id="warp" />
-                </effect-type>
-            </effects>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="596380717459770" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\frame.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Text2" sid="750342573819618">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="Browser" sid="748945763486434">
-            <plugin id="Browser" />
         </object-type>
     </object-folder>
     <families>
@@ -319,18 +317,18 @@
                 <behavior-type name="LiteTween" sid="886714154191902">
                     <behavior id="lunarray_LiteTween" />
                 </behavior-type>
-                <behavior-type name="Pin2UI" sid="345907639359814">
+                <behavior-type name="Pin" sid="312335390520884">
                     <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
         </family>
-        <family name="Family1" plugin-id="Sprite" sid="650294013453204">
+        <family name="BattleUI" plugin-id="Sprite" sid="650294013453204">
             <members>
                 <member>FIGHT</member>
                 <member>PSI</member>
                 <member>RUN</member>
-                <member>Sprite2</member>
                 <member>Sprite4</member>
+                <member>UIBackground</member>
             </members>
         </family>
         <family name="Background_Tile" plugin-id="TiledBg" sid="696863926193463">
@@ -351,6 +349,17 @@
                 <member>Sprite3</member>
                 <member>Sprite5</member>
             </members>
+        </family>
+        <family name="Enemies_BATTLE" plugin-id="Sprite" sid="484009580947593">
+            <members>
+                <member>EnemyTest</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="Name" sid="846100742843366" type="string" />
+                <instance-variable name="HP" sid="331150786482086" type="number" />
+                <instance-variable name="Attack" sid="872259300244175" type="number" />
+                <instance-variable name="DeathType" sid="785381590645253" type="number" />
+            </instance-variables>
         </family>
     </families>
     <layout-folder>

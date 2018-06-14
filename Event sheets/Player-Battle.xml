@@ -47,286 +47,357 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="363494457491129">
+        <event-group description="" sid="206166787558872" title="Button Moving/Selecting">
+            <sub-events>
+                <event-group description="Switching between/Selecting different Buttons" sid="445795105084631" title="Button Selection">
+                    <sub-events>
+                        <event-block sid="701436043738784">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="173974688853788" type="System">
+                                    <param id="0" name="Variable">SELECT</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="940649427354107" type="System">
+                                    <param id="0" name="Variable">SELECT</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="820364187591446">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="300671729407260" type="System">
+                                    <param id="0" name="Variable">SELECT</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="333924336276099" type="System">
+                                    <param id="0" name="Variable">SELECT</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="363494457491129">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="682452525736886" type="System">
+                                    <param id="0" name="Variable">TURN</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="303173198736938" type="BattleButtons" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="765060196222224">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="925536068780066" type="Keyboard">
+                                            <param id="0" name="Key">37 (Left arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Subtract from" sid="896483626220869" type="System">
+                                            <param id="0" name="Variable">SELECT</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="668432740842990">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="734080890638486" type="Keyboard">
+                                            <param id="0" name="Key">39 (Right arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="281996214492736" type="System">
+                                            <param id="0" name="Variable">SELECT</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="371640041450221">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="941877493523341" type="Keyboard">
+                                            <param id="0" name="Key">13 (Return)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="949942598180434">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="359255959189121" type="System">
+                                                    <param id="0" name="Variable">SELECT</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-42" name="Signal" sid="979617086855743" type="System">
+                                                    <param id="0" name="Tag">&quot;ATTACK&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="ButtonID vs. SELECT" sid="694986733887347" title="Button Reorder">
+                    <sub-events>
+                        <event-block sid="523828316948577">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="113387031845051" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="980472165205181">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="291229432860246" type="BattleButtons">
+                                            <param id="0" name="Instance variable">ButtonID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">SELECT</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="183525860841954" type="ButtonNameDisplay">
+                                            <param id="0" name="Text">BattleButtons.Name</param>
+                                        </action>
+                                        <action id="4" name="Set font color" sid="232223208165996" type="ButtonNameDisplay">
+                                            <param id="0" name="Color">rgb(int(BattleButtons.R), int(BattleButtons.G), int(BattleButtons.B))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="586956064796954">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="637637735835509" type="BattleButtons">
+                                    <param id="0" name="Instance variable">ButtonID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">SELECT</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="999418358385799" type="BattleButtons">
+                                    <param id="0" name="Target is">0</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">417</param>
+                                </action>
+                                <action behavior="LiteTween" id="3" name="Set target" sid="827057265121912" type="BattleButtons">
+                                    <param id="0" name="Target is">1</param>
+                                    <param id="1" name="Relativity">0</param>
+                                    <param id="2" name="Value">34</param>
+                                </action>
+                                <action behavior="LiteTween" id="10" name="Start" sid="796654807179540" type="BattleButtons">
+                                    <param id="0" name="Start Mode">0</param>
+                                    <param id="1" name="Force use current">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="472543174824365" type="BattleButtons">
+                                    <param id="0" name="Animation">&quot;Select&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="962892275774408" type="BattleButtons">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="939478678382414">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="430290441549233" type="BattleButtons">
+                                    <param id="0" name="Instance variable">ButtonID</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">SELECT</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="654194057711174" type="BattleButtons">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Sine" id="0" name="Set active" sid="675476081270509" type="BattleButtons">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Sine" id="5" name="Set cycle position" sid="127524193566322" type="BattleButtons">
+                                    <param id="0" name="Cycle position">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="574995346816758">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="179123899981829" type="BattleButtons">
+                                            <param id="0" name="Instance variable">ButtonID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">SELECT-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="973044891970528" type="BattleButtons">
+                                            <param id="0" name="Target is">0</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">39</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="440929313354288" type="BattleButtons">
+                                            <param id="0" name="Target is">1</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">56</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="966287712266227" type="BattleButtons">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="945270926447937">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="167779069229171" type="BattleButtons">
+                                            <param id="0" name="Instance variable">ButtonID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">SELECT+1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="907814772392625" type="BattleButtons">
+                                            <param id="0" name="Target is">0</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">815</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="940815166104760" type="BattleButtons">
+                                            <param id="0" name="Target is">1</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">56</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="916726487589657" type="BattleButtons">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="558608415420897">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="520227730950781" type="BattleButtons">
+                                            <param id="0" name="Instance variable">ButtonID</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">SELECT-1</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="134823914491642" type="BattleButtons">
+                                            <param id="0" name="Instance variable">ButtonID</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">SELECT+1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="229564257548099" type="BattleButtons">
+                                            <param id="0" name="Target is">0</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">418</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="3" name="Set target" sid="656364372764224" type="BattleButtons">
+                                            <param id="0" name="Target is">1</param>
+                                            <param id="1" name="Relativity">0</param>
+                                            <param id="2" name="Value">-33</param>
+                                        </action>
+                                        <action behavior="LiteTween" id="10" name="Start" sid="592803151981978" type="BattleButtons">
+                                            <param id="0" name="Start Mode">0</param>
+                                            <param id="1" name="Force use current">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-block sid="221455191008769">
             <conditions>
-                <condition id="-14" name="Compare variable" sid="682452525736886" type="System">
+                <condition id="-14" name="Compare variable" sid="327036389958212" type="System">
+                    <param id="0" name="Variable">TURN</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">-1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="LiteTween" id="3" name="Set target" sid="125816683399058" type="UIBackground">
+                    <param id="0" name="Target is">1</param>
+                    <param id="1" name="Relativity">0</param>
+                    <param id="2" name="Value">49.04</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="162734792447771" type="UIBackground">
+                    <param id="0" name="Start Mode">0</param>
+                    <param id="1" name="Force use current">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="584806261373908" type="BattleTextUI">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="945078651885866" type="BattleText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="926985846379103" type="BattleText">
+                    <param id="0" name="Text">Enemies_BATTLE.Name &amp; &quot; appeared!&quot;</param>
+                </action>
+                <action id="-7" name="Set size" sid="179648806315350" type="BattleTextUI">
+                    <param id="0" name="Width">BattleText.width</param>
+                    <param id="1" name="Height">BattleText.height</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="346088721610252">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="913080870874913" type="Keyboard">
+                            <param id="0" name="Key">13 (Return)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="760692583778575" type="BattleTextUI">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="456339595144882" type="BattleText">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="435794590454338" type="System">
+                            <param id="0" name="Variable">TURN</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="970336006081107">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="386767419178096" type="System">
                     <param id="0" name="Variable">TURN</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="765060196222224">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="925536068780066" type="Keyboard">
-                            <param id="0" name="Key">37 (Left arrow)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Subtract from" sid="896483626220869" type="System">
-                            <param id="0" name="Variable">SELECT</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="668432740842990">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="734080890638486" type="Keyboard">
-                            <param id="0" name="Key">39 (Right arrow)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Add to" sid="281996214492736" type="System">
-                            <param id="0" name="Variable">SELECT</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="371640041450221">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="941877493523341" type="Keyboard">
-                            <param id="0" name="Key">13 (Return)</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="949942598180434">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="359255959189121" type="System">
-                                    <param id="0" name="Variable">SELECT</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-42" name="Signal" sid="979617086855743" type="System">
-                                    <param id="0" name="Tag">&quot;ATTACK&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="701436043738784">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="173974688853788" type="System">
-                    <param id="0" name="Variable">SELECT</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="940649427354107" type="System">
-                    <param id="0" name="Variable">SELECT</param>
-                    <param id="1" name="Value">2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="820364187591446">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="300671729407260" type="System">
-                    <param id="0" name="Variable">SELECT</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="333924336276099" type="System">
-                    <param id="0" name="Variable">SELECT</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="523828316948577">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="113387031845051" type="System" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="980472165205181">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="291229432860246" type="BattleButtons">
-                            <param id="0" name="Instance variable">ButtonID</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">SELECT</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="183525860841954" type="Text2">
-                            <param id="0" name="Text">BattleButtons.Name</param>
-                        </action>
-                        <action id="4" name="Set font color" sid="232223208165996" type="Text2">
-                            <param id="0" name="Color">rgb(int(BattleButtons.R), int(BattleButtons.G), int(BattleButtons.B))</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="540647916516630">
-                    <conditions />
-                    <actions>
-                        <action id="-41" name="Wait for signal" sid="311796649883644" type="System">
-                            <param id="0" name="Tag">&quot;ATTACK&quot;</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="448342783555987" type="System">
-                            <param id="0" name="Variable">TURN</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="586956064796954">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="637637735835509" type="BattleButtons">
-                    <param id="0" name="Instance variable">ButtonID</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">SELECT</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Pin2UI" id="1" name="Unpin" sid="478836415324866" type="BattleButtons" />
-                <action behavior="LiteTween" id="3" name="Set target" sid="999418358385799" type="BattleButtons">
-                    <param id="0" name="Target is">0</param>
-                    <param id="1" name="Relativity">0</param>
-                    <param id="2" name="Value">417</param>
-                </action>
-                <action behavior="LiteTween" id="3" name="Set target" sid="827057265121912" type="BattleButtons">
+                <action behavior="LiteTween" id="3" name="Set target" sid="734809171136950" type="UIBackground">
                     <param id="0" name="Target is">1</param>
                     <param id="1" name="Relativity">0</param>
-                    <param id="2" name="Value">34</param>
+                    <param id="2" name="Value">158.04</param>
                 </action>
-                <action behavior="LiteTween" id="10" name="Start" sid="249478896151206" type="BattleButtons">
-                    <param id="0" name="Start Mode">1</param>
+                <action behavior="LiteTween" id="1" name="Set duration" sid="260460549647507" type="UIBackground">
+                    <param id="0" name="Duration">0.1</param>
+                </action>
+                <action behavior="LiteTween" id="10" name="Start" sid="670104809170845" type="UIBackground">
+                    <param id="0" name="Start Mode">0</param>
                     <param id="1" name="Force use current">0</param>
-                </action>
-                <action id="4" name="Set animation" sid="472543174824365" type="BattleButtons">
-                    <param id="0" name="Animation">&quot;Select&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="962892275774408" type="BattleButtons">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action behavior="Pin2UI" id="0" name="Pin to object" sid="588045072168872" type="BattleButtons">
-                    <param id="0" name="Pin to">Sprite2</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="939478678382414">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="430290441549233" type="BattleButtons">
-                    <param id="0" name="Instance variable">ButtonID</param>
-                    <param id="1" name="Comparison">1</param>
-                    <param id="2" name="Value">SELECT</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="654194057711174" type="BattleButtons">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="675476081270509" type="BattleButtons">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action behavior="Sine" id="5" name="Set cycle position" sid="127524193566322" type="BattleButtons">
-                    <param id="0" name="Cycle position">0</param>
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="574995346816758">
+                <event-block sid="891296451628986">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="179123899981829" type="BattleButtons">
-                            <param id="0" name="Instance variable">ButtonID</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">SELECT-1</param>
+                        <condition id="-2" name="Compare Y" sid="249840101040664" type="UIBackground">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">157</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Pin2UI" id="1" name="Unpin" sid="594892249258585" type="BattleButtons" />
-                        <action behavior="LiteTween" id="3" name="Set target" sid="973044891970528" type="BattleButtons">
-                            <param id="0" name="Target is">0</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">39</param>
-                        </action>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="440929313354288" type="BattleButtons">
-                            <param id="0" name="Target is">1</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">56</param>
-                        </action>
-                        <action behavior="LiteTween" id="10" name="Start" sid="129929271494231" type="BattleButtons">
-                            <param id="0" name="Start Mode">1</param>
-                            <param id="1" name="Force use current">0</param>
-                        </action>
-                        <action behavior="Pin2UI" id="0" name="Pin to object" sid="155598452013565" type="BattleButtons">
-                            <param id="0" name="Pin to">Sprite2</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="945270926447937">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="167779069229171" type="BattleButtons">
-                            <param id="0" name="Instance variable">ButtonID</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">SELECT+1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Pin2UI" id="1" name="Unpin" sid="195983153397121" type="BattleButtons" />
-                        <action behavior="LiteTween" id="3" name="Set target" sid="907814772392625" type="BattleButtons">
-                            <param id="0" name="Target is">0</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">815</param>
-                        </action>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="940815166104760" type="BattleButtons">
-                            <param id="0" name="Target is">1</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">56</param>
-                        </action>
-                        <action behavior="LiteTween" id="10" name="Start" sid="702117529739102" type="BattleButtons">
-                            <param id="0" name="Start Mode">1</param>
-                            <param id="1" name="Force use current">0</param>
-                        </action>
-                        <action behavior="Pin2UI" id="0" name="Pin to object" sid="333372531636414" type="BattleButtons">
-                            <param id="0" name="Pin to">Sprite2</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block any="1" sid="558608415420897">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="520227730950781" type="BattleButtons">
-                            <param id="0" name="Instance variable">ButtonID</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">SELECT-1</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="134823914491642" type="BattleButtons">
-                            <param id="0" name="Instance variable">ButtonID</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">SELECT+1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Pin2UI" id="1" name="Unpin" sid="317583463449633" type="BattleButtons" />
-                        <action behavior="LiteTween" id="3" name="Set target" sid="229564257548099" type="BattleButtons">
-                            <param id="0" name="Target is">0</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">418</param>
-                        </action>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="656364372764224" type="BattleButtons">
-                            <param id="0" name="Target is">1</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">-33</param>
-                        </action>
-                        <action behavior="LiteTween" id="10" name="Start" sid="290744466074342" type="BattleButtons">
-                            <param id="0" name="Start Mode">1</param>
-                            <param id="1" name="Force use current">0</param>
-                        </action>
-                        <action behavior="Pin2UI" id="0" name="Pin to object" sid="505598054166150" type="BattleButtons">
-                            <param id="0" name="Pin to">Sprite2</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="330103194594490" type="BattleButtons" />
                     </actions>
                 </event-block>
             </sub-events>

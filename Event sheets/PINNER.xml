@@ -8,12 +8,16 @@
                 <condition id="-2" name="On start of layout" sid="409405132398990" type="System" />
             </conditions>
             <actions>
-                <action behavior="Pin2UI" id="0" name="Pin to object" sid="464905666826788" type="BattleButtons">
-                    <param id="0" name="Pin to">Sprite2</param>
+                <action behavior="Pin" id="0" name="Pin to object" sid="844573462193293" type="BattleButtons">
+                    <param id="0" name="Pin to">UIBackground</param>
                     <param id="1" name="Mode">0</param>
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="634550662993480" type="Sprite4">
-                    <param id="0" name="Pin to">Sprite2</param>
+                    <param id="0" name="Pin to">UIBackground</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="145642692295196" type="ButtonNameDisplay">
+                    <param id="0" name="Pin to">UIBackground</param>
                     <param id="1" name="Mode">0</param>
                 </action>
             </actions>
