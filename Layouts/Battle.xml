@@ -136,7 +136,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="EnemyTest" uid="11">
+                <instance type="Test_Enemy" uid="11">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -148,11 +148,12 @@
                         <HP>0</HP>
                         <Attack>0</Attack>
                         <DeathType>0</DeathType>
+                        <entrancemsg>attacked!</entrancemsg>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>427</x>
+                        <x>431</x>
                         <y>247</y>
                         <z>0</z>
                         <width>157.84803772</width>
@@ -160,6 +161,64 @@
                         <depth>0</depth>
                         <hotspotX>0.466809422</hotspotX>
                         <hotspotY>0.606796145</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Llumiserp" uid="28">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Name>Llumiserp</Name>
+                        <HP>0</HP>
+                        <Attack>0</Attack>
+                        <DeathType>0</DeathType>
+                        <entrancemsg>slithered in!</entrancemsg>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>639</x>
+                        <y>235</y>
+                        <z>0</z>
+                        <width>233.131057739</width>
+                        <height>211.76071167</height>
+                        <depth>0</depth>
+                        <hotspotX>0.519444466</hotspotX>
+                        <hotspotY>0.492354751</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Llumiserp" uid="31">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Name>Llumiserp</Name>
+                        <HP>0</HP>
+                        <Attack>0</Attack>
+                        <DeathType>0</DeathType>
+                        <entrancemsg>slithered in!</entrancemsg>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>225</x>
+                        <y>235</y>
+                        <z>0</z>
+                        <width>233.131057739</width>
+                        <height>211.76071167</height>
+                        <depth>0</depth>
+                        <hotspotX>0.519444466</hotspotX>
+                        <hotspotY>0.492354751</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -238,33 +297,6 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>0.75</opacity>
-                    </world>
-                </instance>
-                <instance type="PlayerData" uid="5">
-                    <properties>
-                        <text>Text</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>255,255,255</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>427</x>
-                        <y>361</y>
-                        <z>0</z>
-                        <width>200</width>
-                        <height>118</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="FIGHT" uid="9">
@@ -491,7 +523,7 @@
                     <properties>
                         <text>&quot;&quot; Appeared!</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Candara,-30.4,700,0</font>
+                        <font>Candara,-16,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -499,6 +531,15 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="TextResize">
+                            <properties>
+                                <auto-resize>Yes</auto-resize>
+                                <min-width>100</min-width>
+                                <min-height>50</min-height>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -510,6 +551,33 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerData" uid="5">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-16</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>427</x>
+                        <y>361</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>118</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -24,15 +24,20 @@
                 <event-block sid="370654757422096">
                     <conditions>
                         <condition id="-17" name="Compare opacity" sid="191090238657464" type="System">
-                            <param id="0" name="Layer">3</param>
+                            <param id="0" name="Layer">LayerIndex(&quot;CAMERA&quot;)</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Opacity">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="292428448327959" type="System">
+                            <param id="0" name="Variable">TURN</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-18" name="Set layer opacity" sid="440588519707965" type="System">
-                            <param id="0" name="Layer">3</param>
-                            <param id="1" name="Opacity">LayerOpacity(3)-10</param>
+                            <param id="0" name="Layer">LayerIndex(&quot;CAMERA&quot;)</param>
+                            <param id="1" name="Opacity">LayerOpacity(LayerIndex(&quot;CAMERA&quot;))-10</param>
                         </action>
                     </actions>
                 </event-block>

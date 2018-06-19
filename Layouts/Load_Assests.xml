@@ -306,6 +306,64 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Test_Enemy" uid="29">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Name>Test_Enemy</Name>
+                        <HP>0</HP>
+                        <Attack>0</Attack>
+                        <DeathType>0</DeathType>
+                        <entrancemsg>attacked!</entrancemsg>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2209</x>
+                        <y>319</y>
+                        <z>0</z>
+                        <width>157.84803772</width>
+                        <height>138.864196777</height>
+                        <depth>0</depth>
+                        <hotspotX>0.466809422</hotspotX>
+                        <hotspotY>0.606796145</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Llumiserp" uid="30">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Name>Llumiserp</Name>
+                        <HP>0</HP>
+                        <Attack>0</Attack>
+                        <DeathType>0</DeathType>
+                        <entrancemsg>slithered in!</entrancemsg>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2251</x>
+                        <y>577</y>
+                        <z>0</z>
+                        <width>233.131057739</width>
+                        <height>211.76071167</height>
+                        <depth>0</depth>
+                        <hotspotX>0.519444466</hotspotX>
+                        <hotspotY>0.492354751</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
