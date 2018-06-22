@@ -28,11 +28,13 @@
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="Scirra" id="brightness">Brightness</effect>
         <effect author="Brad Larson" id="bulge">Bulge</effect>
         <effect author="Brad Larson" id="crystalball">Crystal Ball</effect>
         <effect author="Scirra" id="multiply">Multiply</effect>
         <effect author="Scirra" id="polarinvert">Polar invert</effect>
         <effect author="Danguafer/Silexars" id="pulse">Pulse</effect>
+        <effect author="Scirra" id="tint">Tint</effect>
         <effect author="Scirra" id="warp">Warp</effect>
         <effect author="Scirra" id="warpripple">Warp Ripple</effect>
     </used-effects>
@@ -405,6 +407,14 @@
                 <instance-variable name="DeathType" sid="785381590645253" type="number" />
                 <instance-variable name="entrancemsg" sid="955733580671691" type="string" />
             </instance-variables>
+            <effects>
+                <effect-type name="Tint">
+                    <effect id="tint" />
+                </effect-type>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
+                </effect-type>
+            </effects>
         </family>
     </families>
     <layout-folder>

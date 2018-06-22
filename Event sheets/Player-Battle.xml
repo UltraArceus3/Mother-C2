@@ -5,6 +5,7 @@
     <events>
         <comment bookmark="1">Player Arrays-&#x0D;&#x0A;&#x0D;&#x0A;0- Info&#x0D;&#x0A;&#x09;0- Name&#x0D;&#x0A;&#x09;1- HP&#x0D;&#x0A;1- Battle Stats&#x0D;&#x0A;&#x09;0- Damage Taken</comment>
         <variable constant="0" name="SELECT" sid="468511488657434" static="0" type="number">0</variable>
+        <variable constant="0" name="RUN" sid="321313655398554" static="0" type="number">0</variable>
         <event-block sid="516030469565090">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="958655510867306" type="System" />
@@ -135,8 +136,9 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-42" name="Signal" sid="979617086855743" type="System">
-                                                    <param id="0" name="Tag">&quot;ATTACK&quot;</param>
+                                                <action id="0" name="Call function" sid="869454050689832" type="Function">
+                                                    <param id="0" name="Name">&quot;ATTACK&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -149,9 +151,9 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="581515029625203" type="Function">
-                                                    <param id="0" name="Name">&quot;RUN&quot;</param>
-                                                    <param id="1" name="Parameter {n}"></param>
+                                                <action id="-9" name="Set value" sid="731169509817708" type="System">
+                                                    <param id="0" name="Variable">RUN</param>
+                                                    <param id="1" name="Value">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -327,171 +329,172 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-block sid="221455191008769">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="327036389958212" type="System">
-                    <param id="0" name="Variable">TURN</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">-1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="LiteTween" id="3" name="Set target" sid="125816683399058" type="UIBackground">
-                    <param id="0" name="Target is">1</param>
-                    <param id="1" name="Relativity">0</param>
-                    <param id="2" name="Value">49.04</param>
-                </action>
-                <action behavior="LiteTween" id="10" name="Start" sid="162734792447771" type="UIBackground">
-                    <param id="0" name="Start Mode">0</param>
-                    <param id="1" name="Force use current">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="584806261373908" type="BattleTextUI">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="945078651885866" type="BattleText">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-            </actions>
+        <event-group description="" sid="740533443380878" title="UI Movement">
             <sub-events>
-                <event-block sid="346088721610252">
+                <event-block sid="221455191008769">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="913080870874913" type="Keyboard">
-                            <param id="0" name="Key">13 (Return)</param>
-                        </condition>
-                        <condition id="-17" name="Compare opacity" sid="772393925608610" type="System">
-                            <param id="0" name="Layer">3</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Opacity">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="760692583778575" type="BattleTextUI">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="456339595144882" type="BattleText">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="435794590454338" type="System">
+                        <condition id="-14" name="Compare variable" sid="327036389958212" type="System">
                             <param id="0" name="Variable">TURN</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Sets Text at the beginning of the battle</comment>
-                <event-block sid="517114229073849">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="937984246101135" type="System">
-                            <param id="0" name="First value">Enemies_BATTLE.Count</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">2</param>
+                            <param id="2" name="Value">-1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="926985846379103" type="BattleText">
-                            <param id="0" name="Text">Enemies_BATTLE.Name &amp; &quot; &amp; its cohort &quot; &amp; Enemies_BATTLE.entrancemsg</param>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="125816683399058" type="UIBackground">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">49.04</param>
                         </action>
-                        <action id="-7" name="Set size" sid="179648806315350" type="BattleTextUI">
-                            <param id="0" name="Width">BattleText.width+100</param>
-                            <param id="1" name="Height">BattleText.height</param>
+                        <action behavior="LiteTween" id="10" name="Start" sid="162734792447771" type="UIBackground">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
                         </action>
-                    </actions>
-                </event-block>
-                <event-block sid="889663720667030">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="495989093616419" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="411583309464896" type="BattleText">
-                            <param id="0" name="Text">Enemies_BATTLE.Name &amp; &quot; &quot; &amp; Enemies_BATTLE.entrancemsg</param>
+                        <action id="-15" name="Set visible" sid="584806261373908" type="BattleTextUI">
+                            <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-7" name="Set size" sid="638191419276307" type="BattleTextUI">
-                            <param id="0" name="Width">BattleText.width+100</param>
-                            <param id="1" name="Height">BattleText.height</param>
+                        <action id="-15" name="Set visible" sid="945078651885866" type="BattleText">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="313752832356543">
+                        <event-block sid="346088721610252">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="128797323921827" type="System">
+                                <condition id="0" name="On key pressed" sid="913080870874913" type="Keyboard">
+                                    <param id="0" name="Key">13 (Return)</param>
+                                </condition>
+                                <condition id="-17" name="Compare opacity" sid="772393925608610" type="System">
+                                    <param id="0" name="Layer">3</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Opacity">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="760692583778575" type="BattleTextUI">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="456339595144882" type="BattleText">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="435794590454338" type="System">
+                                    <param id="0" name="Variable">TURN</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Sets Text at the beginning of the battle</comment>
+                        <event-block sid="517114229073849">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="937984246101135" type="System">
                                     <param id="0" name="First value">Enemies_BATTLE.Count</param>
-                                    <param id="1" name="Comparison">4</param>
+                                    <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="867414731042108" type="BattleText">
-                                    <param id="0" name="Text">Enemies_BATTLE.Name &amp; &quot; &amp; its cohorts &quot; &amp; Enemies_BATTLE.entrancemsg</param>
+                                <action id="0" name="Set text" sid="926985846379103" type="BattleText">
+                                    <param id="0" name="Text">Enemies_BATTLE.Name &amp; &quot; &amp; its cohort &quot; &amp; Enemies_BATTLE.entrancemsg</param>
                                 </action>
-                                <action id="-7" name="Set size" sid="899576912570271" type="BattleTextUI">
+                                <action id="-7" name="Set size" sid="179648806315350" type="BattleTextUI">
                                     <param id="0" name="Width">BattleText.width+100</param>
                                     <param id="1" name="Height">BattleText.height</param>
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="889663720667030">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="495989093616419" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="411583309464896" type="BattleText">
+                                    <param id="0" name="Text">Enemies_BATTLE.Name &amp; &quot; &quot; &amp; Enemies_BATTLE.entrancemsg</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="638191419276307" type="BattleTextUI">
+                                    <param id="0" name="Width">BattleText.width+100</param>
+                                    <param id="1" name="Height">BattleText.height</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="313752832356543">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="128797323921827" type="System">
+                                            <param id="0" name="First value">Enemies_BATTLE.Count</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="867414731042108" type="BattleText">
+                                            <param id="0" name="Text">Enemies_BATTLE.Name &amp; &quot; &amp; its cohorts &quot; &amp; Enemies_BATTLE.entrancemsg</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="899576912570271" type="BattleTextUI">
+                                            <param id="0" name="Width">BattleText.width+100</param>
+                                            <param id="1" name="Height">BattleText.height</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="970336006081107">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="386767419178096" type="System">
-                    <param id="0" name="Variable">TURN</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="LiteTween" id="3" name="Set target" sid="734809171136950" type="UIBackground">
-                    <param id="0" name="Target is">1</param>
-                    <param id="1" name="Relativity">0</param>
-                    <param id="2" name="Value">158.04</param>
-                </action>
-                <action behavior="LiteTween" id="1" name="Set duration" sid="260460549647507" type="UIBackground">
-                    <param id="0" name="Duration">0.1</param>
-                </action>
-                <action behavior="LiteTween" id="10" name="Start" sid="670104809170845" type="UIBackground">
-                    <param id="0" name="Start Mode">0</param>
-                    <param id="1" name="Force use current">0</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="891296451628986">
+                <event-block sid="970336006081107">
                     <conditions>
-                        <condition id="-2" name="Compare Y" sid="249840101040664" type="UIBackground">
-                            <param id="0" name="Comparison">5</param>
-                            <param id="1" name="Y co-ordinate">157</param>
+                        <condition id="-14" name="Compare variable" sid="386767419178096" type="System">
+                            <param id="0" name="Variable">TURN</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Pin" id="1" name="Unpin" sid="330103194594490" type="BattleButtons" />
+                        <action behavior="LiteTween" id="3" name="Set target" sid="734809171136950" type="UIBackground">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">158.04</param>
+                        </action>
+                        <action behavior="LiteTween" id="1" name="Set duration" sid="260460549647507" type="UIBackground">
+                            <param id="0" name="Duration">0.1</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="670104809170845" type="UIBackground">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="891296451628986">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="249840101040664" type="UIBackground">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="Y co-ordinate">157</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="1" name="Unpin" sid="330103194594490" type="BattleButtons" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
         <event-block sid="701860026660632">
             <conditions>
-                <condition id="0" name="On function" sid="252005924713627" type="Function">
-                    <param id="0" name="Name">&quot;RUN&quot;</param>
+                <condition id="-17" name="Compare opacity" sid="493774786520935" type="System">
+                    <param id="0" name="Layer">LayerIndex(&quot;CAMERA&quot;)</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Opacity">100</param>
                 </condition>
-                <condition id="-23" name="While" sid="701558549904206" type="System" />
-                <condition id="-8" name="Compare two values" sid="417997819839635" type="System">
-                    <param id="0" name="First value">LayerIndex(&quot;CAMERA&quot;)</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">100</param>
+                <condition id="-14" name="Compare variable" sid="174889739028081" type="System">
+                    <param id="0" name="Variable">RUN</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-18" name="Set layer opacity" sid="585330225081610" type="System">
                     <param id="0" name="Layer">3</param>
-                    <param id="1" name="Opacity">LayerOpacity(LayerIndex(&quot;CAMERA&quot;))+0.1</param>
+                    <param id="1" name="Opacity">LayerOpacity(LayerIndex(&quot;CAMERA&quot;))+10</param>
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="765055838074707">
-                    <conditions />
-                    <actions />
-                </event-block>
-                <event-block disabled="1" sid="371022261912326">
+                <event-block sid="371022261912326">
                     <conditions>
                         <condition id="-17" name="Compare opacity" sid="193508610654777" type="System">
                             <param id="0" name="Layer">LayerIndex(&quot;CAMERA&quot;)</param>
@@ -501,12 +504,23 @@
                     </conditions>
                     <actions>
                         <action id="-16" name="Wait" sid="776739651563339" type="System">
-                            <param id="0" name="Seconds">1</param>
+                            <param id="0" name="Seconds">0.5</param>
                         </action>
                         <action id="1" name="Close" sid="389548928269733" type="Browser" />
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="776451592254505">
+            <conditions>
+                <condition id="0" name="On function" sid="111615256713166" type="Function">
+                    <param id="0" name="Name">&quot;ATTACK&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="830703071118298" type="Enemies_BATTLE">
+                    <param id="0" name="Unique ID">Enemies_BATTLE.UID</param>
+                </condition>
+            </conditions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>
