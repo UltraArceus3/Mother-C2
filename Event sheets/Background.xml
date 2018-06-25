@@ -4,7 +4,7 @@
     <name>Background</name>
     <events>
         <variable constant="0" name="debug" sid="543853113437847" static="0" type="number">0</variable>
-        <variable constant="0" name="Background" sid="630814047730786" static="0" type="number">1</variable>
+        <variable constant="0" name="Background" sid="630814047730786" static="0" type="number">0</variable>
         <event-block sid="112216484189240">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="376510110703606" type="System" />

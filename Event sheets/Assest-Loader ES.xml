@@ -26,9 +26,6 @@
                     <param id="2" name="X">0</param>
                     <param id="3" name="Y">0</param>
                 </action>
-                <action id="10" name="Request fullscreen" sid="463012691699115" type="Browser">
-                    <param id="0" name="Mode">0</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="646058386483460">
@@ -43,6 +40,7 @@
         </event-block>
         <event-block sid="967616833605006">
             <conditions>
+                <condition id="0" name="On clicked" sid="940027357132950" type="Button" />
                 <condition id="-8" name="Compare two values" sid="226269776964623" type="System">
                     <param id="0" name="First value">loadingprogress*100</param>
                     <param id="1" name="Comparison">0</param>
@@ -53,6 +51,28 @@
                 <action id="-2" name="Go to layout" sid="644775252036379" type="System">
                     <param id="0" name="Layout">Battle</param>
                 </action>
+                <action id="-9" name="Set value" sid="748955860115829" type="System">
+                    <param id="0" name="Variable">Background</param>
+                    <param id="1" name="Value">List.SelectedIndex</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="924863836942002">
+            <conditions>
+                <condition id="1" name="Is checked" sid="983632737830087" type="FullScreen" />
+            </conditions>
+            <actions>
+                <action id="10" name="Request fullscreen" sid="463012691699115" type="Browser">
+                    <param id="0" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="417772965771584">
+            <conditions>
+                <condition id="1" inverted="1" name="Is checked" sid="483546052970898" type="FullScreen" />
+            </conditions>
+            <actions>
+                <action id="11" name="Cancel fullscreen" sid="728710081134741" type="Browser" />
             </actions>
         </event-block>
     </events>
