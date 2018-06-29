@@ -319,6 +319,7 @@
                         <Attack>0</Attack>
                         <DeathType>0</DeathType>
                         <entrancemsg>attacked!</entrancemsg>
+                        <OrderID>0</OrderID>
                     </instance-variables>
                     <effect-instances>
                         <effect-instance type="Tint">
@@ -362,6 +363,7 @@
                         <Attack>0</Attack>
                         <DeathType>0</DeathType>
                         <entrancemsg>slithered in!</entrancemsg>
+                        <OrderID>0</OrderID>
                     </instance-variables>
                     <effect-instances>
                         <effect-instance type="Tint">

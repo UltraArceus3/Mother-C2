@@ -12,7 +12,7 @@
                 <condition id="-1" name="Every tick" sid="934657968204882" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="510789758973626" type="PlayerData">
+                <action disabled="1" id="0" name="Set text" sid="510789758973626" type="PlayerData">
                     <param id="0" name="Text">P1.At(0,0) &amp; newline &amp; &quot;HP - &quot; &amp; P1.At(0,1) &amp; newline &amp; &quot;FPS: &quot; &amp; fps</param>
                 </action>
                 <action disabled="1" id="-23" name="Move at angle" sid="438804775962330" type="UIBackground">

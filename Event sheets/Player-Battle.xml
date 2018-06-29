@@ -4,7 +4,6 @@
     <name>Player-Battle</name>
     <events>
         <comment bookmark="1">Player Arrays-&#x0D;&#x0A;&#x0D;&#x0A;0- Info&#x0D;&#x0A;&#x09;0- Name&#x0D;&#x0A;&#x09;1- HP&#x0D;&#x0A;1- Battle Stats&#x0D;&#x0A;&#x09;0- Damage Taken</comment>
-        <variable constant="0" name="SELECT" sid="468511488657434" static="0" type="number">0</variable>
         <variable constant="0" name="RUN" sid="321313655398554" static="0" type="number">0</variable>
         <event-block sid="516030469565090">
             <conditions>
@@ -48,6 +47,7 @@
                 </action>
             </actions>
         </event-block>
+        <variable constant="0" name="SELECT" sid="468511488657434" static="0" type="number">0</variable>
         <event-group description="" sid="206166787558872" title="Button Moving/Selecting">
             <sub-events>
                 <event-group description="Switching between/Selecting different Buttons" sid="445795105084631" title="Button Selection">
@@ -136,9 +136,13 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="0" name="Call function" sid="869454050689832" type="Function">
-                                                    <param id="0" name="Name">&quot;ATTACK&quot;</param>
-                                                    <param id="1" name="Parameter {n}"></param>
+                                                <action id="-12" name="Set group active" sid="877775215393421" type="System">
+                                                    <param id="0" name="Group name">&quot;ATTACK&quot;</param>
+                                                    <param id="1" name="State">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="710868983689883" type="System">
+                                                    <param id="0" name="Variable">TURN</param>
+                                                    <param id="1" name="Value">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -474,53 +478,173 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="701860026660632">
-            <conditions>
-                <condition id="-17" name="Compare opacity" sid="493774786520935" type="System">
-                    <param id="0" name="Layer">LayerIndex(&quot;CAMERA&quot;)</param>
-                    <param id="1" name="Comparison">1</param>
-                    <param id="2" name="Opacity">100</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="174889739028081" type="System">
-                    <param id="0" name="Variable">RUN</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-18" name="Set layer opacity" sid="585330225081610" type="System">
-                    <param id="0" name="Layer">3</param>
-                    <param id="1" name="Opacity">LayerOpacity(LayerIndex(&quot;CAMERA&quot;))+10</param>
-                </action>
-            </actions>
+        <variable constant="0" name="EnemySelect" sid="928004038036074" static="0" type="number">-1</variable>
+        <event-group description="" sid="962907257721505" title="Button Functions">
             <sub-events>
-                <event-block sid="371022261912326">
+                <event-group description="" sid="992591404352944" title="ATTACK">
+                    <sub-events>
+                        <event-block sid="684804441777573">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="795204162051026" type="System">
+                                    <param id="0" name="Variable">TURN</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="983331839995503" type="PlayerData">
+                                    <param id="0" name="Text">EnemySelect</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="886802158728038">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="568449009843910" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="151720163485406" type="System">
+                                            <param id="0" name="Variable">EnemySelect</param>
+                                            <param id="1" name="Value">Enemies_BATTLE.OrderID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="993135744093792">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="662996914588204" type="Enemies_BATTLE">
+                                            <param id="0" name="Instance variable">OrderID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">EnemySelect</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-28" name="Set effect parameter" sid="133377064317374" type="Enemies_BATTLE">
+                                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">125</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="738226763742529">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="820769503820363" type="Enemies_BATTLE">
+                                            <param id="0" name="Instance variable">OrderID</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">EnemySelect</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-28" name="Set effect parameter" sid="277157482733643" type="Enemies_BATTLE">
+                                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="103090400908915">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="270182496873654" type="Keyboard">
+                                            <param id="0" name="Key">37 (Left arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Subtract from" sid="701696252104942" type="System">
+                                            <param id="0" name="Variable">EnemySelect</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="342407954571548">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="482450866215771" type="Keyboard">
+                                            <param id="0" name="Key">39 (Right arrow)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="199386730826104" type="System">
+                                            <param id="0" name="Variable">EnemySelect</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="526875191940805">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="990105452588088" type="Keyboard">
+                                            <param id="0" name="Key">32 (Space)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="677315605683331" type="System">
+                                            <param id="0" name="Variable">TURN</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                        <action id="-24" name="Stop loop" sid="705955155770356" type="System" />
+                                        <action id="1" name="Close" sid="703921643423409" type="Browser" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="817615539622739">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="568109918622385" type="Keyboard">
+                                            <param id="0" name="Key">8 (Backspace)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="447424585737736" type="System">
+                                            <param id="0" name="Variable">TURN</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="258659893427204" type="System">
+                                            <param id="0" name="Variable">EnemySelect</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="795112575631630" type="Enemies_BATTLE">
+                                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="701860026660632">
                     <conditions>
-                        <condition id="-17" name="Compare opacity" sid="193508610654777" type="System">
+                        <condition id="-17" name="Compare opacity" sid="493774786520935" type="System">
                             <param id="0" name="Layer">LayerIndex(&quot;CAMERA&quot;)</param>
-                            <param id="1" name="Comparison">5</param>
+                            <param id="1" name="Comparison">1</param>
                             <param id="2" name="Opacity">100</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="174889739028081" type="System">
+                            <param id="0" name="Variable">RUN</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="776739651563339" type="System">
-                            <param id="0" name="Seconds">0.5</param>
+                        <action id="-18" name="Set layer opacity" sid="585330225081610" type="System">
+                            <param id="0" name="Layer">3</param>
+                            <param id="1" name="Opacity">LayerOpacity(LayerIndex(&quot;CAMERA&quot;))+10</param>
                         </action>
-                        <action id="1" name="Close" sid="389548928269733" type="Browser" />
                     </actions>
+                    <sub-events>
+                        <event-block sid="371022261912326">
+                            <conditions>
+                                <condition id="-17" name="Compare opacity" sid="193508610654777" type="System">
+                                    <param id="0" name="Layer">LayerIndex(&quot;CAMERA&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Opacity">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="776739651563339" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="1" name="Close" sid="389548928269733" type="Browser" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="776451592254505">
-            <conditions>
-                <condition id="0" name="On function" sid="111615256713166" type="Function">
-                    <param id="0" name="Name">&quot;ATTACK&quot;</param>
-                </condition>
-                <condition id="-14" name="Pick by unique ID" sid="830703071118298" type="Enemies_BATTLE">
-                    <param id="0" name="Unique ID">Enemies_BATTLE.UID</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>
