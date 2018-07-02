@@ -344,14 +344,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="125816683399058" type="UIBackground">
-                            <param id="0" name="Target is">1</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">49.04</param>
-                        </action>
-                        <action behavior="LiteTween" id="10" name="Start" sid="162734792447771" type="UIBackground">
-                            <param id="0" name="Start Mode">0</param>
-                            <param id="1" name="Force use current">0</param>
+                        <action id="0" name="Call function" sid="299174674529658" type="Function">
+                            <param id="0" name="Name">&quot;UIUp&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="584806261373908" type="BattleTextUI">
                             <param id="0" name="Visibility">1</param>
@@ -449,17 +444,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="LiteTween" id="3" name="Set target" sid="734809171136950" type="UIBackground">
-                            <param id="0" name="Target is">1</param>
-                            <param id="1" name="Relativity">0</param>
-                            <param id="2" name="Value">158.04</param>
-                        </action>
-                        <action behavior="LiteTween" id="1" name="Set duration" sid="260460549647507" type="UIBackground">
-                            <param id="0" name="Duration">0.1</param>
-                        </action>
-                        <action behavior="LiteTween" id="10" name="Start" sid="670104809170845" type="UIBackground">
-                            <param id="0" name="Start Mode">0</param>
-                            <param id="1" name="Force use current">0</param>
+                        <action id="0" name="Call function" sid="769528047059796" type="Function">
+                            <param id="0" name="Name">&quot;UIDown&quot;</param>
+                            <param id="1" name="Parameter {n}">0.1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -492,8 +479,16 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="640731793707962" type="BattleButtons">
+                                    <param id="0" name="Pin to">UIBackground</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
                                 <action id="0" name="Set text" sid="983331839995503" type="PlayerData">
                                     <param id="0" name="Text">EnemySelect</param>
+                                </action>
+                                <action id="0" name="Call function" sid="117373753858341" type="Function">
+                                    <param id="0" name="Name">&quot;UIUp&quot;</param>
+                                    <param id="1" name="Parameter {n}">0.1</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -643,6 +638,52 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="745881080437659" title="UI Functions">
+            <sub-events>
+                <event-block sid="300897752237713">
+                    <conditions>
+                        <condition id="0" name="On function" sid="986120443147864" type="Function">
+                            <param id="0" name="Name">&quot;UIDown&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="734809171136950" type="UIBackground">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">158.04</param>
+                        </action>
+                        <action behavior="LiteTween" id="1" name="Set duration" sid="260460549647507" type="UIBackground">
+                            <param id="0" name="Duration">Function.Param(0)</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="670104809170845" type="UIBackground">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="944312442034098">
+                    <conditions>
+                        <condition id="0" name="On function" sid="498957831494995" type="Function">
+                            <param id="0" name="Name">&quot;UIUp&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="LiteTween" id="3" name="Set target" sid="125816683399058" type="UIBackground">
+                            <param id="0" name="Target is">1</param>
+                            <param id="1" name="Relativity">0</param>
+                            <param id="2" name="Value">49.04</param>
+                        </action>
+                        <action behavior="LiteTween" id="1" name="Set duration" sid="892617461055760" type="UIBackground">
+                            <param id="0" name="Duration">Function.Param(0)</param>
+                        </action>
+                        <action behavior="LiteTween" id="10" name="Start" sid="162734792447771" type="UIBackground">
+                            <param id="0" name="Start Mode">0</param>
+                            <param id="1" name="Force use current">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
