@@ -49,7 +49,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Load_Assests</first-layout>
+    <first-layout>Load_Assets</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -273,6 +273,66 @@
                 <plugin id="Function" />
             </object-type>
         </object-folder>
+        <object-folder name="Enemy_Sprites">
+            <object-type name="Llumiserp" sid="518849534351436">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="909478145198135" speed="5">
+                        <frame duration="1" hotspotX="0.519444" hotspotY="0.492355" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\_DUMP\Earthbound_sprite_thingy front.png">
+                            <collision-poly>
+                                <point x="0.316667" y="0.333333" />
+                                <point x="0.519444" y="0.183486" />
+                                <point x="0.630556" y="0.434251" />
+                                <point x="0.863889" y="0.492355" />
+                                <point x="0.997222" y="0.954128" />
+                                <point x="0.519444" y="0.996942" />
+                                <point x="0.0222222" y="0.975535" />
+                                <point x="0.327778" y="0.492355" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="614967276258227" speed="5">
+                        <frame duration="1" hotspotX="0.489071" hotspotY="0.501511" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\_DUMP\Earthbound_sprite_thingy back.png">
+                            <collision-poly>
+                                <point x="0.368852" y="0.432024" />
+                                <point x="0.489071" y="0.193353" />
+                                <point x="0.68306" y="0.350453" />
+                                <point x="0.672131" y="0.498489" />
+                                <point x="0.980874" y="0.978852" />
+                                <point x="0.489071" y="0.996979" />
+                                <point x="0.00819672" y="0.966767" />
+                                <point x="0.125683" y="0.498489" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Test_Enemy" sid="466671834591257">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764624327374128" speed="5">
+                        <frame duration="1" hotspotX="0.466809" hotspotY="0.606796" original-source="C:\Users\ranyk\Pictures\test1trans.jpg" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="245327181813684" speed="5">
+                        <frame duration="1" hotspotX="0.505747" hotspotY="0.528249" original-source="C:\Users\ranyk\Pictures\test1trans1.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Asset_Loader">
+            <object-type name="LoadProgressText" sid="818835270734579">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Button" sid="398018721229984">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="FullScreen" sid="804878260548477">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="List" sid="937926069912116">
+                <plugin id="List" />
+            </object-type>
+        </object-folder>
         <object-type name="CAMERA" sid="494866883482408">
             <plugin id="Sprite" />
             <behaviors>
@@ -292,64 +352,8 @@
         <object-type global="1" name="EnemyBattle" sid="155282408178921">
             <plugin id="Arr" />
         </object-type>
-        <object-type name="Test_Enemy" sid="466671834591257">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="764624327374128" speed="5">
-                    <frame duration="1" hotspotX="0.466809" hotspotY="0.606796" original-source="C:\Users\ranyk\Pictures\test1trans.jpg" />
-                </animation>
-                <animation framecount="1" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="245327181813684" speed="5">
-                    <frame duration="1" hotspotX="0.505747" hotspotY="0.528249" original-source="C:\Users\ranyk\Pictures\test1trans1.jpg" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type global="1" name="P1" sid="719972493438196">
             <plugin id="Arr" />
-        </object-type>
-        <object-type name="LoadProgressText" sid="818835270734579">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="Llumiserp" sid="518849534351436">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="909478145198135" speed="5">
-                    <frame duration="1" hotspotX="0.519444" hotspotY="0.492355" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\_DUMP\Earthbound_sprite_thingy front.png">
-                        <collision-poly>
-                            <point x="0.316667" y="0.333333" />
-                            <point x="0.519444" y="0.183486" />
-                            <point x="0.630556" y="0.434251" />
-                            <point x="0.863889" y="0.492355" />
-                            <point x="0.997222" y="0.954128" />
-                            <point x="0.519444" y="0.996942" />
-                            <point x="0.0222222" y="0.975535" />
-                            <point x="0.327778" y="0.492355" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="614967276258227" speed="5">
-                    <frame duration="1" hotspotX="0.489071" hotspotY="0.501511" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\_DUMP\Earthbound_sprite_thingy back.png">
-                        <collision-poly>
-                            <point x="0.368852" y="0.432024" />
-                            <point x="0.489071" y="0.193353" />
-                            <point x="0.68306" y="0.350453" />
-                            <point x="0.672131" y="0.498489" />
-                            <point x="0.980874" y="0.978852" />
-                            <point x="0.489071" y="0.996979" />
-                            <point x="0.00819672" y="0.966767" />
-                            <point x="0.125683" y="0.498489" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Button" sid="398018721229984">
-            <plugin id="Button" />
-        </object-type>
-        <object-type name="List" sid="937926069912116">
-            <plugin id="List" />
-        </object-type>
-        <object-type name="FullScreen" sid="804878260548477">
-            <plugin id="Button" />
         </object-type>
     </object-folder>
     <families>
@@ -436,7 +440,7 @@
     </families>
     <layout-folder>
         <layout>Battle.xml</layout>
-        <layout>Load_Assests.xml</layout>
+        <layout>Load_Assets.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Background.xml</event-sheet>
@@ -444,7 +448,7 @@
         <event-sheet>Player-Battle.xml</event-sheet>
         <event-sheet>Enemy-Battle.xml</event-sheet>
         <event-sheet>PINNER.xml</event-sheet>
-        <event-sheet>Assest-Loader ES.xml</event-sheet>
+        <event-sheet>Asset-Loader ES.xml</event-sheet>
         <event-sheet>Battle-Functions.xml</event-sheet>
     </event-folder>
     <global-instances>

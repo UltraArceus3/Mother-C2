@@ -125,7 +125,11 @@
                                             <param id="0" name="Key">13 (Return)</param>
                                         </condition>
                                     </conditions>
-                                    <actions />
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="341184425300366" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                    </actions>
                                     <sub-events>
                                         <event-block sid="949942598180434">
                                             <conditions>
@@ -368,12 +372,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="760692583778575" type="BattleTextUI">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="456339595144882" type="BattleText">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
                                 <action id="-9" name="Set value" sid="435794590454338" type="System">
                                     <param id="0" name="Variable">TURN</param>
                                     <param id="1" name="Value">0</param>
@@ -448,6 +446,12 @@
                             <param id="0" name="Name">&quot;UIDown&quot;</param>
                             <param id="1" name="Parameter {n}">0.1</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="241259128302836" type="BattleTextUI">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="352183630251836" type="BattleText">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="891296451628986">
@@ -501,6 +505,12 @@
                                             <param id="0" name="Variable">EnemySelect</param>
                                             <param id="1" name="Value">Enemies_BATTLE.OrderID</param>
                                         </action>
+                                        <action id="-15" name="Set visible" sid="709882892199887" type="BattleTextUI">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="153631344112536" type="BattleText">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="993135744093792">
@@ -516,6 +526,9 @@
                                             <param id="0" name="Effect">&quot;Brightness&quot;</param>
                                             <param id="1" name="Parameter index">0</param>
                                             <param id="2" name="Value">125</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="294124614992952" type="BattleText">
+                                            <param id="0" name="Text">Enemies_BATTLE.Name</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -558,6 +571,32 @@
                                         <action id="-10" name="Add to" sid="199386730826104" type="System">
                                             <param id="0" name="Variable">EnemySelect</param>
                                             <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="240587910451149">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="104994535808347" type="Keyboard">
+                                            <param id="0" name="Key">13 (Return)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="152190707135236" type="Function">
+                                            <param id="0" name="Name">&quot;DoDamage&quot;</param>
+                                            <param id="1" name="Parameter {n}">10</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="526292179887177" type="System">
+                                            <param id="0" name="Variable">TURN</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="474913862933204" type="System">
+                                            <param id="0" name="Variable">EnemySelect</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="191990479472316" type="Enemies_BATTLE">
+                                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">100</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -693,12 +732,7 @@
                     <param id="0" name="Key">90 (Z)</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="0" name="Call function" sid="152190707135236" type="Function">
-                    <param id="0" name="Name">&quot;DoDamage&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Assest-Loader ES</name>
+    <name>Asset-Loader ES</name>
     <events>
         <event-block sid="749781798207565">
             <conditions>

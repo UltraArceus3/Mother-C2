@@ -8,10 +8,19 @@
                 <condition id="0" name="On function" sid="492987788174278" type="Function">
                     <param id="0" name="Name">&quot;DoDamage&quot;</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="616647788244969" type="Enemies_BATTLE">
+                    <param id="0" name="Instance variable">OrderID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">EnemySelect</param>
+                </condition>
             </conditions>
             <actions>
                 <action behavior="Sine" id="0" name="Set active" sid="323057725153400" type="Enemies_BATTLE">
                     <param id="0" name="State">1</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="621444893468207" type="Enemies_BATTLE">
+                    <param id="0" name="Instance variable">HP</param>
+                    <param id="1" name="Value">Function.Param(0)</param>
                 </action>
                 <action id="-16" name="Wait" sid="783803398363507" type="System">
                     <param id="0" name="Seconds">Enemies_BATTLE.Sine.Period</param>
