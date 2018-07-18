@@ -6,6 +6,8 @@
         <variable constant="0" name="TURN" sid="111640865819488" static="0" type="number">-1</variable>
         <include>PINNER</include>
         <include>Player-Battle</include>
+        <include>Enemy-Battle</include>
+        <include>Battle-Functions</include>
         <include>Background</include>
         <event-block sid="278610726369733">
             <conditions>

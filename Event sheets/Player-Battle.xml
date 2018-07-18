@@ -687,5 +687,18 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="236635961004980">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="613852387976312" type="Keyboard">
+                    <param id="0" name="Key">90 (Z)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="152190707135236" type="Function">
+                    <param id="0" name="Name">&quot;DoDamage&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

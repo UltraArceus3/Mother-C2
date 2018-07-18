@@ -419,6 +419,11 @@
                 <instance-variable name="entrancemsg" sid="955733580671691" type="string" />
                 <instance-variable name="OrderID" sid="574776451675817" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="306280605251410">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <effects>
                 <effect-type name="Tint">
                     <effect id="tint" />
@@ -440,6 +445,7 @@
         <event-sheet>Enemy-Battle.xml</event-sheet>
         <event-sheet>PINNER.xml</event-sheet>
         <event-sheet>Assest-Loader ES.xml</event-sheet>
+        <event-sheet>Battle-Functions.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="18" />
