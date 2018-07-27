@@ -150,6 +150,7 @@
                         <DeathType>0</DeathType>
                         <entrancemsg>attacked!</entrancemsg>
                         <OrderID>0</OrderID>
+                        <xtemp>0</xtemp>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -161,7 +162,20 @@
                                 <period-random>0</period-random>
                                 <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
-                                <magnitude>7</magnitude>
+                                <magnitude>17</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="brightnessselect">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Value only</movement>
+                                <wave>Sine</wave>
+                                <period>1</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>75</magnitude>
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
@@ -209,6 +223,7 @@
                         <DeathType>0</DeathType>
                         <entrancemsg>slithered in!</entrancemsg>
                         <OrderID>2</OrderID>
+                        <xtemp>0</xtemp>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -220,7 +235,20 @@
                                 <period-random>0</period-random>
                                 <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
-                                <magnitude>7</magnitude>
+                                <magnitude>17</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="brightnessselect">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Value only</movement>
+                                <wave>Sine</wave>
+                                <period>1</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>75</magnitude>
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
@@ -268,6 +296,7 @@
                         <DeathType>0</DeathType>
                         <entrancemsg>slithered in!</entrancemsg>
                         <OrderID>1</OrderID>
+                        <xtemp>0</xtemp>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -279,7 +308,20 @@
                                 <period-random>0</period-random>
                                 <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
-                                <magnitude>7</magnitude>
+                                <magnitude>17</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="brightnessselect">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Value only</movement>
+                                <wave>Sine</wave>
+                                <period>1</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>75</magnitude>
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
@@ -309,6 +351,49 @@
                         <depth>0</depth>
                         <hotspotX>0.519444466</hotspotX>
                         <hotspotY>0.492354751</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="DmgIndicator" uid="36">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Impact,-32,700,0</font>
+                        <color>204,204,204</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Bounding box</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>5</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>1</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1071</x>
+                        <y>214</y>
+                        <z>0</z>
+                        <width>65.021156311</width>
+                        <height>50.09746933</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

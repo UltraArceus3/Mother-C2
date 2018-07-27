@@ -23,6 +23,7 @@
         <plugin author="R0J0hound" id="rojo_spritesheet" version="1">Sprite sheet</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Rex.Rainbow" id="Rex_text_resize" version="1">Text resize</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
@@ -50,7 +51,7 @@
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
     <first-layout>Load_Assets</first-layout>
-    <use-loader-layout>0</use-loader-layout>
+    <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Downscaling">Medium quality</prop>
@@ -355,6 +356,14 @@
         <object-type global="1" name="P1" sid="719972493438196">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="DmgIndicator" sid="898609165395173">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Physics" sid="489985583530360">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
     </object-folder>
     <families>
         <family name="BattleButtons" plugin-id="Sprite" sid="990003021963795">
@@ -422,9 +431,13 @@
                 <instance-variable name="DeathType" sid="785381590645253" type="number" />
                 <instance-variable name="entrancemsg" sid="955733580671691" type="string" />
                 <instance-variable name="OrderID" sid="574776451675817" type="number" />
+                <instance-variable name="xtemp" sid="844149455260932" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Sine" sid="306280605251410">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="brightnessselect" sid="101582089757078">
                     <behavior id="Sin" />
                 </behavior-type>
             </behaviors>

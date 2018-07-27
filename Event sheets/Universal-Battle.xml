@@ -73,5 +73,32 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="168695769144043">
+            <conditions>
+                <condition id="-18" name="On created" sid="250970303793263" type="DmgIndicator" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="461836227015287" type="DmgIndicator">
+                    <param id="0" name="Impulse">random(50, 60)</param>
+                    <param id="1" name="Angle">random(270, 300)</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Physics" id="9" name="Set angular velocity" sid="737866281107711" type="DmgIndicator">
+                    <param id="0" name="Angular velocity">random(10,100)</param>
+                </action>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="962160790501893" type="DmgIndicator">
+                    <param id="0" name="Object">DmgIndicator</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="773882193460424">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="826995548576310" type="DmgIndicator" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="318322264983576" type="DmgIndicator" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
