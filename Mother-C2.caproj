@@ -20,6 +20,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
         <plugin author="R0J0hound" id="rojo_spritesheet" version="1">Sprite sheet</plugin>
     </used-plugins>
     <used-behaviors>
@@ -34,9 +35,12 @@
         <effect author="Scirra" id="brightness">Brightness</effect>
         <effect author="Brad Larson" id="bulge">Bulge</effect>
         <effect author="Brad Larson" id="crystalball">Crystal Ball</effect>
+        <effect author="Scirra" id="glass">Glass</effect>
+        <effect author="Scirra" id="lumblend">Luminosity</effect>
         <effect author="Scirra" id="multiply">Multiply</effect>
         <effect author="Scirra" id="polarinvert">Polar invert</effect>
         <effect author="Danguafer/Silexars" id="pulse">Pulse</effect>
+        <effect author="Scirra" id="setcolor">Set color</effect>
         <effect author="Scirra" id="tint">Tint</effect>
         <effect author="Scirra" id="warp">Warp</effect>
         <effect author="Scirra" id="warpripple">Warp Ripple</effect>
@@ -69,6 +73,95 @@
     </configuration-settings>
     <object-folder>
         <object-folder name="Background">
+            <object-folder name="Back2">
+                <object-type name="Sprite3" sid="946068299566454">
+                    <plugin id="Sprite" />
+                    <effects>
+                        <effect-type name="Pulse">
+                            <effect id="pulse" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="225778835737899" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\Background.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Sprite5" sid="555294576211992">
+                    <plugin id="Sprite" />
+                    <effects>
+                        <effect-type name="Warp">
+                            <effect id="warp" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="596380717459770" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\frame.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TiledBackground2" sid="585717640285028">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+            </object-folder>
+            <object-folder name="Back3">
+                <object-type name="Sprite2" sid="549084601950684">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="phase" sid="503106696801940" type="number" />
+                    </instance-variables>
+                    <effects>
+                        <effect-type name="Luminosity">
+                            <effect id="lumblend" />
+                        </effect-type>
+                        <effect-type name="SetColor">
+                            <effect id="setcolor" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="632715918757123" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Pictures\Dump\Pattern3.png">
+                                <collision-poly>
+                                    <point x="0.17898" y="0.330134" />
+                                    <point x="0.82102" y="0.330134" />
+                                    <point x="0.82102" y="0.669866" />
+                                    <point x="0.17898" y="0.669866" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TiledBackground3" sid="423843116260257">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+            </object-folder>
+            <object-folder name="Unused">
+                <object-type name="Sprite" sid="802074917835125">
+                    <plugin id="Sprite" />
+                    <effects>
+                        <effect-type name="Warp">
+                            <effect id="warp" />
+                        </effect-type>
+                        <effect-type name="Glass">
+                            <effect id="glass" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="368141620060410" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Pictures\Dump\Pattern2.png">
+                                <collision-poly>
+                                    <point x="0.5" y="0.0114961" />
+                                    <point x="0.991683" y="0.5" />
+                                    <point x="0.5" y="0.988504" />
+                                    <point x="0.00831654" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
             <object-folder name="Back1">
                 <object-type name="SpriteSheet" sid="125693219509835">
                     <plugin id="rojo_spritesheet" />
@@ -116,38 +209,6 @@
                             <effect id="bulge" />
                         </effect-type>
                     </effects>
-                    <texture />
-                </object-type>
-            </object-folder>
-            <object-folder name="Back2">
-                <object-type name="Sprite3" sid="946068299566454">
-                    <plugin id="Sprite" />
-                    <effects>
-                        <effect-type name="Pulse">
-                            <effect id="pulse" />
-                        </effect-type>
-                    </effects>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="225778835737899" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\Background.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="Sprite5" sid="555294576211992">
-                    <plugin id="Sprite" />
-                    <effects>
-                        <effect-type name="Warp">
-                            <effect id="warp" />
-                        </effect-type>
-                    </effects>
-                    <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="596380717459770" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\Documents\GitHub\Mother-C2\frame.png" />
-                        </animation>
-                    </animation-folder>
-                </object-type>
-                <object-type name="TiledBackground2" sid="585717640285028">
-                    <plugin id="TiledBg" />
                     <texture />
                 </object-type>
             </object-folder>
@@ -259,6 +320,14 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
+            <object-type name="ProgressBar" sid="405294534382087">
+                <plugin id="progressbar" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="118573740719982">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
         </object-folder>
         <object-folder name="System">
             <object-type name="Browser" sid="748945763486434">
@@ -316,6 +385,38 @@
                     </animation>
                     <animation framecount="1" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="245327181813684" speed="5">
                         <frame duration="1" hotspotX="0.505747" hotspotY="0.528249" original-source="C:\Users\ranyk\Pictures\test1trans1.jpg" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Escarghoul" sid="514920866862447">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="916064502684910" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.420635" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\33ISKLBD\bigsnailbattle[1].png">
+                            <collision-poly>
+                                <point x="0.306452" y="0.134921" />
+                                <point x="0.5" y="0.134921" />
+                                <point x="0.715054" y="0.103175" />
+                                <point x="0.887097" y="0.420635" />
+                                <point x="0.865591" y="0.960317" />
+                                <point x="0.5" y="0.992063" />
+                                <point x="0.134409" y="0.960317" />
+                                <point x="0.0268817" y="0.420635" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="477882836733069" speed="5">
+                        <frame duration="1" hotspotX="0.458763" hotspotY="0.324561" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\KBGDUJS7\bigsnailbackbattle[1].png">
+                            <collision-poly>
+                                <point x="0.458763" y="0.324561" />
+                                <point x="0.458763" y="0.00877193" />
+                                <point x="0.829897" y="0.324561" />
+                                <point x="0.829897" y="0.95614" />
+                                <point x="0.458763" y="0.991228" />
+                                <point x="0.108247" y="0.921053" />
+                                <point x="0.128866" y="0.324561" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -404,6 +505,7 @@
             <members>
                 <member>TiledBackground</member>
                 <member>TiledBackground2</member>
+                <member>TiledBackground3</member>
             </members>
         </family>
         <family name="Background_Sheet" plugin-id="rojo_spritesheet" sid="426031923342738">
@@ -415,21 +517,26 @@
         </family>
         <family name="Background_Sprite" plugin-id="Sprite" sid="350155702550780">
             <members>
+                <member>Sprite</member>
+                <member>Sprite2</member>
                 <member>Sprite3</member>
                 <member>Sprite5</member>
             </members>
         </family>
         <family name="Enemies_BATTLE" plugin-id="Sprite" sid="484009580947593">
             <members>
+                <member>Escarghoul</member>
                 <member>Llumiserp</member>
                 <member>Test_Enemy</member>
             </members>
             <instance-variables>
                 <instance-variable name="Name" sid="846100742843366" type="string" />
                 <instance-variable name="HP" sid="331150786482086" type="number" />
+                <instance-variable name="FHP" sid="928720783761831" type="number" />
                 <instance-variable name="Attack" sid="872259300244175" type="number" />
                 <instance-variable name="DeathType" sid="785381590645253" type="number" />
                 <instance-variable name="entrancemsg" sid="955733580671691" type="string" />
+                <instance-variable name="deathmsg" sid="425822283747548" type="string" />
                 <instance-variable name="OrderID" sid="574776451675817" type="number" />
                 <instance-variable name="xtemp" sid="844149455260932" type="number" />
             </instance-variables>

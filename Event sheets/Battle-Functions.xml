@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Battle-Functions</name>
     <events>
+        <variable constant="0" name="runloopflash" sid="564208486661987" static="0" type="number">0</variable>
         <event-block sid="928621117190256">
             <conditions>
                 <condition id="0" name="On function" sid="492987788174278" type="Function">
@@ -43,51 +44,32 @@
                 <action id="-1" name="Set X" sid="989280057806792" type="Enemies_BATTLE">
                     <param id="0" name="X">self.xtemp</param>
                 </action>
+                <action id="0" name="Spawn another object" sid="322841502326424" type="Enemies_BATTLE">
+                    <param id="0" name="Object">ProgressBar</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="3" name="Set progress" sid="984358712958747" type="ProgressBar">
+                    <param id="0" name="Value">Enemies_BATTLE.HP</param>
+                </action>
+                <action id="4" name="Set maximum" sid="874545051600140" type="ProgressBar">
+                    <param id="0" name="Maximum">Enemies_BATTLE.FHP</param>
+                </action>
+                <action id="-16" name="Wait" sid="979864484678376" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="947076072622572" type="ProgressBar">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="975434130865687" type="ProgressBar" />
             </actions>
         </event-block>
         <event-group description="" sid="215568573879291" title="Enemy Select Flashing">
             <sub-events>
-                <variable constant="0" name="runloopflsh" sid="564208486661987" static="0" type="number">0</variable>
-                <event-block sid="573955903217217">
-                    <conditions>
-                        <condition id="0" name="On function" sid="219936342712554" type="Function">
-                            <param id="0" name="Name">&quot;Indicate-Flash&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="217110820780235" type="System">
-                            <param id="0" name="Variable">runloopflsh</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="350130657664458" type="PlayerData">
-                            <param id="0" name="Text">runloopflsh</param>
-                        </action>
-                        <action id="1" name="Set return value" sid="233340475408588" type="Function">
-                            <param id="0" name="Value">runloopflsh</param>
-                        </action>
-                        <action id="-42" name="Signal" sid="573885131831147" type="System">
-                            <param id="0" name="Tag">&quot;outoffunc&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="304568283666512">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="223175319371020" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-41" name="Wait for signal" sid="625976417004318" type="System">
-                            <param id="0" name="Tag">&quot;outoffunc&quot;</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="138816930592075" type="System">
-                            <param id="0" name="Variable">runloopflsh</param>
-                            <param id="1" name="Value">Function.ReturnValue</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="514310095560399">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="534190235190068" type="System">
-                            <param id="0" name="Variable">runloopflsh</param>
+                            <param id="0" name="Variable">runloopflash</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -95,6 +77,16 @@
                             <param id="0" name="Instance variable">OrderID</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">EnemySelect</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="488154044089302" type="System">
+                            <param id="0" name="Variable">TURN</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="549444204709817" type="Enemies_BATTLE">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -113,12 +105,13 @@
                         <condition id="0" name="On function" sid="402891719833812" type="Function">
                             <param id="0" name="Name">&quot;Indicate-Off&quot;</param>
                         </condition>
+                        <condition id="-7" inverted="1" name="Compare instance variable" sid="575609809002869" type="Enemies_BATTLE">
+                            <param id="0" name="Instance variable">HP</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="595483165155874" type="System">
-                            <param id="0" name="Variable">runloopflsh</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
                         <action id="-28" name="Set effect parameter" sid="897295836657848" type="Enemies_BATTLE">
                             <param id="0" name="Effect">&quot;Brightness&quot;</param>
                             <param id="1" name="Parameter index">0</param>

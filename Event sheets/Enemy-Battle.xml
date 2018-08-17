@@ -2,5 +2,78 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Enemy-Battle</name>
-    <events />
+    <events>
+        <event-block sid="763412240938044">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="429587323115259" type="Enemies_BATTLE">
+                    <param id="0" name="Instance variable">HP</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="439969321163802" type="System" />
+            </conditions>
+            <actions>
+                <action id="-28" name="Set effect parameter" sid="668566306715777" type="Enemies_BATTLE">
+                    <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                    <param id="1" name="Parameter index">0</param>
+                    <param id="2" name="Value">100</param>
+                </action>
+                <action id="-16" name="Wait" sid="661950352153996" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="0" name="Call function" sid="177502260341155" type="Function">
+                    <param id="0" name="Name">&quot;DeathAnim&quot;</param>
+                    <param id="1" name="Parameter {n}">Enemies_BATTLE.DeathType</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="224838525214730">
+            <conditions>
+                <condition id="0" name="On function" sid="798889523002423" type="Function">
+                    <param id="0" name="Name">&quot;DeathAnim&quot;</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="204899393152113" type="Enemies_BATTLE">
+                    <param id="0" name="Instance variable">HP</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="758636115279888">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="557664587114613" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-28" name="Set effect parameter" sid="315001055219694" type="Enemies_BATTLE">
+                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="283811014367912" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-28" name="Set effect parameter" sid="593856429306775" type="Enemies_BATTLE">
+                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
+                            <param id="1" name="Parameter index">0</param>
+                            <param id="2" name="Value">255</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="526586507294182" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="471763982302795" type="Enemies_BATTLE" />
+                        <action id="-9" name="Set value" sid="624851385768939" type="System">
+                            <param id="0" name="Variable">TURN</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="497851364397760" type="ProgressBar" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
 </c2eventsheet>

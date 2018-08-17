@@ -316,9 +316,11 @@
                     <instance-variables>
                         <Name>Test_Enemy</Name>
                         <HP>0</HP>
+                        <FHP>0</FHP>
                         <Attack>0</Attack>
                         <DeathType>0</DeathType>
                         <entrancemsg>attacked!</entrancemsg>
+                        <deathmsg>became tame!</deathmsg>
                         <OrderID>0</OrderID>
                         <xtemp>0</xtemp>
                     </instance-variables>
@@ -389,9 +391,11 @@
                     <instance-variables>
                         <Name>Llumiserp</Name>
                         <HP>0</HP>
+                        <FHP>0</FHP>
                         <Attack>0</Attack>
                         <DeathType>0</DeathType>
                         <entrancemsg>slithered in!</entrancemsg>
+                        <deathmsg>became tame!</deathmsg>
                         <OrderID>0</OrderID>
                         <xtemp>0</xtemp>
                     </instance-variables>
@@ -495,6 +499,41 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Sprite2" uid="1">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <phase>0</phase>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="Luminosity" />
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>0</green>
+                                <red>0.75</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>1</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1219</x>
+                        <y>-163</y>
+                        <z>0</z>
+                        <width>873</width>
+                        <height>280</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -567,7 +606,7 @@
                 </instance>
                 <instance type="List" uid="34">
                     <properties>
-                        <items>Red/Yellow;Blue</items>
+                        <items>Red/Yellow;Blue;Boss-Style</items>
                         <tooltip>Background</tooltip>
                         <initial-visibility>Visible</initial-visibility>
                         <enabled>Yes</enabled>
