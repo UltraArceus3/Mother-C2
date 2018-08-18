@@ -517,6 +517,11 @@
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">EnemySelect</param>
                                         </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="387455729948432" type="Enemies_BATTLE">
+                                            <param id="0" name="Instance variable">HP</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Set value" sid="867629661383519" type="System">

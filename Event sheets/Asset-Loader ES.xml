@@ -75,5 +75,27 @@
                 <action id="11" name="Cancel fullscreen" sid="728710081134741" type="Browser" />
             </actions>
         </event-block>
+        <event-block sid="792073858990947">
+            <conditions>
+                <condition id="1" name="Is checked" sid="744677854674722" type="BackgroundOnly" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="857256804101165" type="System">
+                    <param id="0" name="Variable">debug</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="654017510522036">
+            <conditions>
+                <condition id="1" inverted="1" name="Is checked" sid="778526582884142" type="BackgroundOnly" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="558581215897581" type="System">
+                    <param id="0" name="Variable">debug</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

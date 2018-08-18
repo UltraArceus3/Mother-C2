@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Enemy-OW</name>
+    <events>
+        <event-block sid="701943175174022">
+            <conditions />
+            <actions>
+                <action id="-23" name="Move at angle" sid="401443548246811" type="EscarghoulOW">
+                    <param id="0" name="Angle">angle(self.X, self.Y, Player_OW.X, Player_OW.Y)</param>
+                    <param id="1" name="Distance">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

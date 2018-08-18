@@ -171,8 +171,8 @@
                         <x>1034</x>
                         <y>-179</y>
                         <z>0</z>
-                        <width>924.842834473</width>
-                        <height>498</height>
+                        <width>854</width>
+                        <height>480</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -534,6 +534,26 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="TiledBackground3" uid="40">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1683</x>
+                        <y>-26</y>
+                        <z>0</z>
+                        <width>854</width>
+                        <height>480</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -646,6 +666,30 @@
                         <y>409</y>
                         <z>0</z>
                         <width>112</width>
+                        <height>24</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="BackgroundOnly" uid="44">
+                    <properties>
+                        <type>Checkbox</type>
+                        <text>Background-Only</text>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <checked>No</checked>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>414</x>
+                        <y>436</y>
+                        <z>0</z>
+                        <width>147</width>
                         <height>24</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>

@@ -24,12 +24,14 @@
         <plugin author="R0J0hound" id="rojo_spritesheet" version="1">Sprite sheet</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Rex.Rainbow" id="Rex_text_resize" version="1">Text resize</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="brightness">Brightness</effect>
@@ -434,6 +436,9 @@
             <object-type name="List" sid="937926069912116">
                 <plugin id="List" />
             </object-type>
+            <object-type name="BackgroundOnly" sid="738712339794544">
+                <plugin id="Button" />
+            </object-type>
         </object-folder>
         <object-type name="CAMERA" sid="494866883482408">
             <plugin id="Sprite" />
@@ -464,6 +469,82 @@
                     <behavior id="Physics" />
                 </behavior-type>
             </behaviors>
+        </object-type>
+        <object-type name="Player_OW" sid="494701965945013">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="401762200796647">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="270806322283257" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EscarghoulOW" sid="340615072435938">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="1" name="LeftD" pingpong="0" repeatcount="1" repeatto="0" sid="115413785150515" speed="5">
+                    <frame duration="1" hotspotX="0.467213" hotspotY="0.207317" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\FHPYN6CV\snailoverworldanim1[1].png">
+                        <collision-poly>
+                            <point x="0.434426" y="0.158537" />
+                            <point x="0.5" y="0.158537" />
+                            <point x="0.565574" y="0.207317" />
+                            <point x="0.959016" y="0.939024" />
+                            <point x="0.467213" y="0.987805" />
+                            <point x="0.106557" y="0.743902" />
+                            <point x="0.00819672" y="0.207317" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.484127" hotspotY="0.121622" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\33ISKLBD\snailoverworldanim2[1].png">
+                        <collision-poly>
+                            <point x="0.706349" y="0.121622" />
+                            <point x="0.992063" y="0.986486" />
+                            <point x="0.484127" y="0.986486" />
+                            <point x="0.103175" y="0.77027" />
+                            <point x="0.103175" y="0.121622" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="RightD" pingpong="0" repeatcount="1" repeatto="0" sid="761015915861231" speed="5">
+                    <frame duration="1" hotspotX="0.532787" hotspotY="0.207317">
+                        <collision-poly>
+                            <point x="0.991803" y="0.207317" />
+                            <point x="0.893443" y="0.743902" />
+                            <point x="0.532787" y="0.987805" />
+                            <point x="0.0409836" y="0.939024" />
+                            <point x="0.434426" y="0.207317" />
+                            <point x="0.5" y="0.158537" />
+                            <point x="0.565574" y="0.158537" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.515873" hotspotY="0.121622">
+                        <collision-poly>
+                            <point x="0.896825" y="0.121622" />
+                            <point x="0.896825" y="0.77027" />
+                            <point x="0.515873" y="0.986486" />
+                            <point x="0.00793654" y="0.986486" />
+                            <point x="0.293651" y="0.121622" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="665426585446942">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite6" sid="355757767907839">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="859833677285380" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Button2" sid="392128207418321">
+            <plugin id="Button" />
         </object-type>
     </object-folder>
     <families>
@@ -557,10 +638,30 @@
                 </effect-type>
             </effects>
         </family>
+        <family name="OverworldEntities" plugin-id="Sprite" sid="534461328910477">
+            <members>
+                <member>EscarghoulOW</member>
+                <member>Player_OW</member>
+            </members>
+            <behaviors>
+                <behavior-type name="8Direction" sid="436051727512102">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="158551050631542">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Enemies_OW" plugin-id="Sprite" sid="144549118688168">
+            <members>
+                <member>EscarghoulOW</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout>Battle.xml</layout>
         <layout>Load_Assets.xml</layout>
+        <layout>Overworld.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Background.xml</event-sheet>
@@ -570,6 +671,8 @@
         <event-sheet>PINNER.xml</event-sheet>
         <event-sheet>Asset-Loader ES.xml</event-sheet>
         <event-sheet>Battle-Functions.xml</event-sheet>
+        <event-sheet>Overworld ES.xml</event-sheet>
+        <event-sheet>Enemy-OW.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="18" />

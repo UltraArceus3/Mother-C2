@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Overworld ES</name>
+    <events>
+        <include>Enemy-OW</include>
+        <event-block sid="678507204049613">
+            <conditions>
+                <condition id="0" name="On function" sid="207903431794618" type="Function">
+                    <param id="0" name="Name">&quot;InitiateBattle&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="324144743513524">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="416983041747710" type="Player_OW">
+                    <param id="0" name="Object">Enemies_OW</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="802350429374335" type="Function">
+                    <param id="0" name="Name">&quot;InitiateBattle&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Set text" sid="985228937019014" type="Text">
+                    <param id="0" name="Text">Enemies_OW.PickedCount</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
