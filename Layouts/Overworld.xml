@@ -203,6 +203,48 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="sprite_" uid="51">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Zigzag">
+                            <properties>
+                                <activated>Yes</activated>
+                                <start>Yes</start>
+                                <rotatable>Yes</rotatable>
+                                <repeat-count>1</repeat-count>
+                                <commands>L 60; F 60</commands>
+                                <max-moving-speed>400</max-moving-speed>
+                                <moving-acceleration>90</moving-acceleration>
+                                <moving-deceleration>0</moving-deceleration>
+                                <max-rotation-speed>180</max-rotation-speed>
+                                <rotation-acceleration>100</rotation-acceleration>
+                                <rotation-deceleration>0</rotation-deceleration>
+                                <initial-angle>0</initial-angle>
+                                <precise-mode>Yes</precise-mode>
+                                <continued-mode>Yes</continued-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>743</x>
+                        <y>161</y>
+                        <z>0</z>
+                        <width>94</width>
+                        <height>96</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>

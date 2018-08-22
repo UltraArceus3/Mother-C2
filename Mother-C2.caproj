@@ -27,6 +27,7 @@
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_Zigzag" version="1">Zigzag</behavior>
         <behavior author="Rex.Rainbow" id="Rex_text_resize" version="1">Text resize</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
@@ -59,10 +60,10 @@
     <first-layout>Load_Assets</first-layout>
     <use-loader-layout>1</use-loader-layout>
     <configuration-settings>
-        <prop name="Clear background">Yes</prop>
+        <prop name="Clear background">No</prop>
         <prop name="Downscaling">Medium quality</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen in browser">Scale inner</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Nothing (not recommended)</prop>
         <prop name="Orientations">Any</prop>
@@ -422,6 +423,141 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Wickory" sid="784049335984492">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="512209133739175" speed="5">
+                        <frame duration="1" hotspotX="0.42381" hotspotY="0.527027" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\KBGDUJS7\flametree[1].png">
+                            <collision-poly>
+                                <point x="0.0238095" y="0.148649" />
+                                <point x="0.42381" y="0.0585586" />
+                                <point x="0.57619" y="0.382883" />
+                                <point x="0.82381" y="0.527027" />
+                                <point x="0.804762" y="0.887387" />
+                                <point x="0.42381" y="0.959459" />
+                                <point x="0.0428571" y="0.887387" />
+                                <point x="0.17619" y="0.527027" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Mesmire" sid="143743235305425">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="558295910744648" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.463855" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\33ISKLBD\hypghost[1].png">
+                            <collision-poly>
+                                <point x="0.309524" y="0.222892" />
+                                <point x="0.5" y="0.0060241" />
+                                <point x="0.690476" y="0.222892" />
+                                <point x="0.97619" y="0.463855" />
+                                <point x="0.9" y="0.96988" />
+                                <point x="0.5" y="0.801205" />
+                                <point x="0.1" y="0.96988" />
+                                <point x="0.0238095" y="0.463855" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="783085352681077" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.509709" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\KBGDUJS7\mesmireback[1].png">
+                            <collision-poly>
+                                <point x="0.30198" y="0.315534" />
+                                <point x="0.5" y="0.160194" />
+                                <point x="0.69802" y="0.315534" />
+                                <point x="0.915842" y="0.509709" />
+                                <point x="0.737624" y="0.742718" />
+                                <point x="0.5" y="0.820388" />
+                                <point x="0.262376" y="0.742718" />
+                                <point x="0.0841584" y="0.509709" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Ruptree" sid="532690635028392">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="686328490156058" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.644928" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\FHPYN6CV\minionbomb[1].png">
+                            <collision-poly>
+                                <point x="0.5" y="0.0942029" />
+                                <point x="0.792683" y="0.471014" />
+                                <point x="0.890244" y="0.644928" />
+                                <point x="0.743902" y="0.789855" />
+                                <point x="0.5" y="0.992754" />
+                                <point x="0.256098" y="0.789855" />
+                                <point x="0.158537" y="0.644928" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="945804666056567" speed="5">
+                        <frame duration="1" hotspotX="0.471429" hotspotY="0.478723" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\33ISKLBD\minionbombback[1].png">
+                            <collision-poly>
+                                <point x="0.242857" y="0.308511" />
+                                <point x="0.471429" y="0.0106383" />
+                                <point x="0.7" y="0.308511" />
+                                <point x="0.928571" y="0.478723" />
+                                <point x="0.985714" y="0.861702" />
+                                <point x="0.471429" y="0.989362" />
+                                <point x="0.0142857" y="0.819149" />
+                                <point x="0.0714286" y="0.478723" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Candlestick" sid="319384986733833">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="276785941925577" speed="5">
+                        <frame duration="1" hotspotX="0.468085" hotspotY="0.640351" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\KBGDUJS7\normalminion[1].png">
+                            <collision-poly>
+                                <point x="0.146446" y="0" />
+                                <point x="1" y="0.576268" />
+                                <point x="1" y="1" />
+                                <point x="1" y="1" />
+                                <point x="0.146446" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="769144086423411" speed="5">
+                        <frame duration="1" hotspotX="0.471429" hotspotY="0.575472" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\FHPYN6CV\normalminionback[1].png">
+                            <collision-poly>
+                                <point x="0.357143" y="0.5" />
+                                <point x="0.471429" y="0.235849" />
+                                <point x="0.7" y="0.424528" />
+                                <point x="0.985714" y="0.575472" />
+                                <point x="0.928571" y="0.877358" />
+                                <point x="0.471429" y="0.990566" />
+                                <point x="0.0142857" y="0.877358" />
+                                <point x="0.0142857" y="0.575472" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CandyDS" sid="414077546750614">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="928168672055675" speed="5">
+                        <frame duration="1" hotspotX="0.570423" hotspotY="0.519481" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\31JJWNS6\candyboi[1].png">
+                            <collision-poly>
+                                <point x="0.227029" y="0.117275" />
+                                <point x="0.570423" y="0" />
+                                <point x="0.913816" y="0.117275" />
+                                <point x="1" y="0.517837" />
+                                <point x="1" y="1" />
+                                <point x="0.570423" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0.517837" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Asset_Loader">
             <object-type name="LoadProgressText" sid="818835270734579">
@@ -437,6 +573,9 @@
                 <plugin id="List" />
             </object-type>
             <object-type name="BackgroundOnly" sid="738712339794544">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="GBAMode" sid="376909163554890">
                 <plugin id="Button" />
             </object-type>
         </object-folder>
@@ -546,6 +685,42 @@
         <object-type name="Button2" sid="392128207418321">
             <plugin id="Button" />
         </object-type>
+        <object-type name="sprite_" sid="214639159253123">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Zigzag" sid="737903569042359">
+                    <behavior id="Rex_Zigzag" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="156699127296831" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\AppData\Local\Temp\Rar$DRa25904.37852\sprite_0.png">
+                        <collision-poly>
+                            <point x="0.148936" y="0.15625" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.851064" y="0.15625" />
+                            <point x="0.829787" y="0.5" />
+                            <point x="0.851064" y="0.84375" />
+                            <point x="0.5" y="0.9375" />
+                            <point x="0.148936" y="0.84375" />
+                            <point x="0.170213" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ranyk\AppData\Local\Temp\Rar$DRa25904.37852\sprite_1.png">
+                        <collision-poly>
+                            <point x="0.323077" y="0.308333" />
+                            <point x="0.5" y="0.00833333" />
+                            <point x="0.676923" y="0.308333" />
+                            <point x="0.992308" y="0.5" />
+                            <point x="0.676923" y="0.691667" />
+                            <point x="0.5" y="0.991667" />
+                            <point x="0.323077" y="0.691667" />
+                            <point x="0.00769231" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="BattleButtons" plugin-id="Sprite" sid="990003021963795">
@@ -606,9 +781,14 @@
         </family>
         <family name="Enemies_BATTLE" plugin-id="Sprite" sid="484009580947593">
             <members>
+                <member>Candlestick</member>
+                <member>CandyDS</member>
                 <member>Escarghoul</member>
                 <member>Llumiserp</member>
+                <member>Mesmire</member>
+                <member>Ruptree</member>
                 <member>Test_Enemy</member>
+                <member>Wickory</member>
             </members>
             <instance-variables>
                 <instance-variable name="Name" sid="846100742843366" type="string" />

@@ -170,6 +170,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <variable constant="0" name="numofshape" sid="969454869898792" static="0" type="number">11</variable>
                         <event-block sid="218336617109646">
                             <conditions>
                                 <condition id="-1" name="Every tick" sid="291970175463292" type="System" />
@@ -219,15 +220,15 @@
                                                 <condition id="-8" name="Compare two values" sid="679644954566202" type="System">
                                                     <param id="0" name="First value">Sprite2.Count</param>
                                                     <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Second value">11</param>
+                                                    <param id="2" name="Second value">numofshape</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="-5" name="Set width" sid="824074033865494" type="Sprite2">
-                                                    <param id="0" name="Width">Self.Width+3*11</param>
+                                                    <param id="0" name="Width">Self.Width+3*numofshape</param>
                                                 </action>
                                                 <action id="-6" name="Set height" sid="645716211328464" type="Sprite2">
-                                                    <param id="0" name="Height">Self.Height-1*11</param>
+                                                    <param id="0" name="Height">Self.Height-1*numofshape</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -236,7 +237,7 @@
                                                 <condition id="-8" name="Compare two values" sid="296245573132935" type="System">
                                                     <param id="0" name="First value">Sprite2.Count</param>
                                                     <param id="1" name="Comparison">5</param>
-                                                    <param id="2" name="Second value">11</param>
+                                                    <param id="2" name="Second value">numofshape</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -265,15 +266,15 @@
                                                 <condition id="-8" name="Compare two values" sid="527321862445272" type="System">
                                                     <param id="0" name="First value">Sprite2.Count</param>
                                                     <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Second value">11</param>
+                                                    <param id="2" name="Second value">numofshape</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
                                                 <action id="-5" name="Set width" sid="695804021737991" type="Sprite2">
-                                                    <param id="0" name="Width">Self.Width-3*11</param>
+                                                    <param id="0" name="Width">Self.Width-3*numofshape</param>
                                                 </action>
                                                 <action id="-6" name="Set height" sid="178831875546963" type="Sprite2">
-                                                    <param id="0" name="Height">Self.Height+1*11</param>
+                                                    <param id="0" name="Height">Self.Height+1*numofshape</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -282,7 +283,7 @@
                                                 <condition id="-8" name="Compare two values" sid="359952799810914" type="System">
                                                     <param id="0" name="First value">Sprite2.Count</param>
                                                     <param id="1" name="Comparison">5</param>
-                                                    <param id="2" name="Second value">11</param>
+                                                    <param id="2" name="Second value">numofshape</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -298,7 +299,7 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <variable constant="0" name="timebrk" sid="532575938502259" static="0" type="number">0.090909091</variable>
+                        <variable constant="0" name="timetotal" sid="532575938502259" static="0" type="number">1</variable>
                         <event-block sid="594363942410754">
                             <conditions>
                                 <condition id="-4" name="Trigger once while true" sid="625283985881270" type="System" />
@@ -315,124 +316,27 @@
                                     <param id="2" name="X">0</param>
                                     <param id="3" name="Y">0</param>
                                 </action>
-                                <action id="-3" name="Create object" sid="414109572623682" type="System">
-                                    <param id="0" name="Object to create">Sprite2</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">427</param>
-                                    <param id="3" name="Y">240</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="270627354753565" type="System">
-                                    <param id="0" name="Seconds">timebrk</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="116595674356571" type="System">
-                                    <param id="0" name="Object to create">Sprite2</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">427</param>
-                                    <param id="3" name="Y">240</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="308719327667074" type="System">
-                                    <param id="0" name="Seconds">timebrk</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="588632468447768" type="System">
-                                    <param id="0" name="Object to create">Sprite2</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">427</param>
-                                    <param id="3" name="Y">240</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="449026110842441" type="System">
-                                    <param id="0" name="Seconds">timebrk</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="644497301678683" type="System">
-                                    <param id="0" name="Object to create">Sprite2</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">427</param>
-                                    <param id="3" name="Y">240</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="383127694940989" type="System">
-                                    <param id="0" name="Seconds">timebrk</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="552100541952139" type="System">
-                                    <param id="0" name="Object to create">Sprite2</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">427</param>
-                                    <param id="3" name="Y">240</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="117318382093645" type="System">
-                                    <param id="0" name="Seconds">timebrk</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="815558397536694" type="System">
-                                    <param id="0" name="Object to create">Sprite2</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">427</param>
-                                    <param id="3" name="Y">240</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="109889521862470" type="System">
-                                    <param id="0" name="Seconds">timebrk</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="845818856657907" type="System">
-                                    <param id="0" name="Object to create">Sprite2</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">427</param>
-                                    <param id="3" name="Y">240</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="960352142797264" type="System">
-                                    <param id="0" name="Seconds">timebrk</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="617810400293805" type="System">
-                                    <param id="0" name="Object to create">Sprite2</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">427</param>
-                                    <param id="3" name="Y">240</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="462188244218951" type="System">
-                                    <param id="0" name="Seconds">timebrk</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="897953017254768" type="System">
-                                    <param id="0" name="Object to create">Sprite2</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">427</param>
-                                    <param id="3" name="Y">240</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="884394619292023" type="System">
-                                    <param id="0" name="Seconds">timebrk</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="552250268772099" type="System">
-                                    <param id="0" name="Object to create">Sprite2</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">427</param>
-                                    <param id="3" name="Y">240</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="417332740296346" type="System">
-                                    <param id="0" name="Seconds">timebrk</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="477249061927981" type="System">
-                                    <param id="0" name="Object to create">Sprite2</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">427</param>
-                                    <param id="3" name="Y">240</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="484323417508347" type="System">
-                                    <param id="0" name="Seconds">timebrk</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="982535112461968" type="System">
-                                    <param id="0" name="Object to create">Sprite2</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">427</param>
-                                    <param id="3" name="Y">240</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="201525498623875" type="System">
-                                    <param id="0" name="Seconds">timebrk</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="872598098665301" type="System">
-                                    <param id="0" name="Object to create">Sprite2</param>
-                                    <param id="1" name="Layer">0</param>
-                                    <param id="2" name="X">427</param>
-                                    <param id="3" name="Y">240</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="297250967109344" type="System">
-                                    <param id="0" name="Seconds">timebrk</param>
-                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="808831789468724">
+                                    <conditions>
+                                        <condition id="-12" name="Repeat" sid="147895378484533" type="System">
+                                            <param id="0" name="Count">numofshape</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="855153294208168" type="System">
+                                            <param id="0" name="Seconds">(timetotal/numofshape)*loopindex</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="398281909894710" type="System">
+                                            <param id="0" name="Object to create">Sprite2</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">427</param>
+                                            <param id="3" name="Y">240</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

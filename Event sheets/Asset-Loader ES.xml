@@ -97,5 +97,25 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="207834656229350">
+            <conditions>
+                <condition id="1" name="Is checked" sid="869406596148924" type="GBAMode" />
+            </conditions>
+            <actions>
+                <action id="-40" name="Set fullscreen scaling" sid="429645527263033" type="System">
+                    <param id="0" name="Fullscreen scaling">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="397761614161559">
+            <conditions>
+                <condition id="1" inverted="1" name="Is checked" sid="126967432960663" type="GBAMode" />
+            </conditions>
+            <actions>
+                <action id="-40" name="Set fullscreen scaling" sid="758601223547083" type="System">
+                    <param id="0" name="Fullscreen scaling">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
