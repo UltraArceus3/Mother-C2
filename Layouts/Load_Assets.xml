@@ -316,7 +316,6 @@
                     <instance-variables>
                         <Name>Test_Enemy</Name>
                         <HP>0</HP>
-                        <FHP>0</FHP>
                         <Attack>0</Attack>
                         <DeathType>0</DeathType>
                         <entrancemsg>attacked!</entrancemsg>
@@ -391,7 +390,6 @@
                     <instance-variables>
                         <Name>Llumiserp</Name>
                         <HP>0</HP>
-                        <FHP>0</FHP>
                         <Attack>0</Attack>
                         <DeathType>0</DeathType>
                         <entrancemsg>slithered in!</entrancemsg>
@@ -564,7 +562,6 @@
                     <instance-variables>
                         <Name>Wickory</Name>
                         <HP>0</HP>
-                        <FHP>0</FHP>
                         <Attack>0</Attack>
                         <DeathType>0</DeathType>
                         <entrancemsg>fires up!</entrancemsg>
@@ -639,7 +636,6 @@
                     <instance-variables>
                         <Name>Escarghoul</Name>
                         <HP>25</HP>
-                        <FHP>25</FHP>
                         <Attack>0</Attack>
                         <DeathType>0</DeathType>
                         <entrancemsg>slithered in!</entrancemsg>
@@ -714,7 +710,6 @@
                     <instance-variables>
                         <Name>Candlestick</Name>
                         <HP>0</HP>
-                        <FHP>0</FHP>
                         <Attack>0</Attack>
                         <DeathType>0</DeathType>
                         <entrancemsg>comes out of the woodwork!</entrancemsg>
@@ -789,7 +784,6 @@
                     <instance-variables>
                         <Name>Ruptree</Name>
                         <HP>0</HP>
-                        <FHP>0</FHP>
                         <Attack>0</Attack>
                         <DeathType>0</DeathType>
                         <entrancemsg>ignites!</entrancemsg>
@@ -875,8 +869,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>522</x>
-                        <y>1176</y>
+                        <x>764.949890137</x>
+                        <y>1193.543945313</y>
                         <z>0</z>
                         <width>250</width>
                         <height>250</height>
@@ -897,7 +891,6 @@
                     <instance-variables>
                         <Name>DFO</Name>
                         <HP>0</HP>
-                        <FHP>0</FHP>
                         <Attack>0</Attack>
                         <DeathType>0</DeathType>
                         <entrancemsg>suddenly appeared!</entrancemsg>
@@ -972,7 +965,6 @@
                     <instance-variables>
                         <Name>Blues</Name>
                         <HP>0</HP>
-                        <FHP>0</FHP>
                         <Attack>0</Attack>
                         <DeathType>0</DeathType>
                         <entrancemsg>started their concert!</entrancemsg>
@@ -1047,7 +1039,6 @@
                     <instance-variables>
                         <Name>Rhythm</Name>
                         <HP>0</HP>
-                        <FHP>0</FHP>
                         <Attack>0</Attack>
                         <DeathType>0</DeathType>
                         <entrancemsg>started their concert!</entrancemsg>
@@ -1288,7 +1279,6 @@
                     <instance-variables>
                         <Name>Candy Dreamstalk</Name>
                         <HP>0</HP>
-                        <FHP>0</FHP>
                         <Attack>0</Attack>
                         <DeathType>0</DeathType>
                         <entrancemsg>ambushed you!</entrancemsg>
@@ -1363,9 +1353,8 @@
                     <instance-variables>
                         <Name>Mesmire</Name>
                         <HP>0</HP>
-                        <FHP>0</FHP>
                         <Attack>0</Attack>
-                        <DeathType>0</DeathType>
+                        <DeathType>6</DeathType>
                         <entrancemsg>swept in!</entrancemsg>
                         <deathmsg>stopped moving!</deathmsg>
                         <OrderID>0</OrderID>
@@ -1416,14 +1405,36 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2070</x>
-                        <y>1167</y>
+                        <x>1997</x>
+                        <y>1228</y>
                         <z>0</z>
                         <width>210</width>
                         <height>166</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.463855416</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Stand" uid="39">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1829</x>
+                        <y>1221</y>
+                        <z>0</z>
+                        <width>82</width>
+                        <height>178</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.387640446</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

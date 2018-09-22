@@ -75,6 +75,44 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="668540210296364">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="175566877979278" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="798698136686817" type="Enemies_BATTLE">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="581563439952519" type="System">
+                            <param id="0" name="Seconds">((Enemies_BATTLE.AnimationSpeed/60)*Enemies_BATTLE.AnimationFrameCount) + 1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="333036754610593" type="Enemies_BATTLE">
+                            <param id="0" name="Object">Stand</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="867317897295494" type="Enemies_BATTLE" />
+                        <action id="-9" name="Set value" sid="373391330297958" type="System">
+                            <param id="0" name="Variable">TURN</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="296106323933529">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="118169108981861" type="Enemies_BATTLE">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="767493839373717">
@@ -84,7 +122,11 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Second value">0</param>
                 </condition>
-                <condition id="-4" name="Trigger once while true" sid="435528909392431" type="System" />
+                <condition id="-14" name="Compare variable" sid="435528909392431" type="System">
+                    <param id="0" name="Variable">TURN</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">-3</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="833383355625910" type="System">
@@ -118,6 +160,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="782753298693845" type="System">
+                    <param id="0" name="Variable">TURN</param>
+                    <param id="1" name="Value">-3</param>
+                </action>
                 <action id="-15" name="Set visible" sid="851823887916451" type="BattleTextUI">
                     <param id="0" name="Visibility">0</param>
                 </action>

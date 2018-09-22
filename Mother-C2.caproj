@@ -433,6 +433,12 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="4" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="115337540301012" speed="5">
+                        <frame duration="1" hotspotX="0.42381" hotspotY="0.527027" original-source="C:\Users\ranyk\AppData\Local\Temp\wickorydeath\wickorydeath1.png" />
+                        <frame duration="1" hotspotX="0.460396" hotspotY="0.5" original-source="C:\Users\ranyk\AppData\Local\Temp\wickorydeath\wickorydeath2.png" />
+                        <frame duration="1" hotspotX="0.442857" hotspotY="0.469697" original-source="C:\Users\ranyk\AppData\Local\Temp\wickorydeath\wickorydeath3.png" />
+                        <frame duration="1" hotspotX="0.442857" hotspotY="0.469697" original-source="C:\Users\ranyk\AppData\Local\Temp\wickorydeath\wickorydeath4.png" />
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="Mesmire" sid="143743235305425">
@@ -465,6 +471,15 @@
                                 <point x="0.0841584" y="0.509709" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                    <animation framecount="7" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="546691936473980" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.463855" original-source="C:\Users\ranyk\AppData\Local\Temp\mesmiremelt\melt1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.439759" original-source="C:\Users\ranyk\AppData\Local\Temp\mesmiremelt\melt2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.401099" original-source="C:\Users\ranyk\AppData\Local\Temp\mesmiremelt\melt3.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.401099" original-source="C:\Users\ranyk\AppData\Local\Temp\mesmiremelt\melt4.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.401099" original-source="C:\Users\ranyk\AppData\Local\Temp\mesmiremelt\melt5.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.38764" original-source="C:\Users\ranyk\AppData\Local\Temp\mesmiremelt\melt6.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.38764" original-source="C:\Users\ranyk\AppData\Local\Temp\mesmiremelt\melt7.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -801,6 +816,25 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Stand" sid="162358390339180">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361452010386218" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.38764" original-source="C:\Users\ranyk\AppData\Local\Temp\mesmiremelt\melt7.png">
+                        <collision-poly>
+                            <point x="0" y="0.201579" />
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0.201579" />
+                            <point x="0.80834" y="0.282038" />
+                            <point x="1" y="0.402727" />
+                            <point x="0.5" y="0.815078" />
+                            <point x="0" y="0.402727" />
+                            <point x="0.191661" y="0.282038" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="BattleButtons" plugin-id="Sprite" sid="990003021963795">
@@ -876,7 +910,6 @@
             <instance-variables>
                 <instance-variable name="Name" sid="846100742843366" type="string" />
                 <instance-variable name="HP" sid="331150786482086" type="number" />
-                <instance-variable name="FHP" sid="928720783761831" type="number" />
                 <instance-variable name="Attack" sid="872259300244175" type="number" />
                 <instance-variable name="DeathType" sid="785381590645253" type="number" />
                 <instance-variable name="entrancemsg" sid="955733580671691" type="string" />

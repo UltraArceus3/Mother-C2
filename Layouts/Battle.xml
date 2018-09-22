@@ -47,7 +47,50 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Test_Enemy" uid="11">
+                <instance type="DmgIndicator" uid="36">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Impact,-32,700,0</font>
+                        <color>204,204,204</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>No</immovable>
+                                <collision-mask>Bounding box</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>5</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>1</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1071</x>
+                        <y>214</y>
+                        <z>0</z>
+                        <width>65.021156311</width>
+                        <height>50.09746933</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Mesmire" uid="11">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -55,13 +98,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Name>Test_Enemy</Name>
-                        <HP>30</HP>
-                        <FHP>30</FHP>
+                        <Name>Mesmire</Name>
+                        <HP>1</HP>
                         <Attack>0</Attack>
-                        <DeathType>0</DeathType>
-                        <entrancemsg>attacked!</entrancemsg>
-                        <deathmsg>became tame!</deathmsg>
+                        <DeathType>6</DeathType>
+                        <entrancemsg>swept in!</entrancemsg>
+                        <deathmsg>stopped moving!</deathmsg>
                         <OrderID>0</OrderID>
                         <xtemp>0</xtemp>
                     </instance-variables>
@@ -110,282 +152,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>431</x>
-                        <y>204</y>
+                        <x>428</x>
+                        <y>225</y>
                         <z>0</z>
-                        <width>157.84803772</width>
-                        <height>138.864196777</height>
-                        <depth>0</depth>
-                        <hotspotX>0.466809422</hotspotX>
-                        <hotspotY>0.606796145</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Llumiserp" uid="28">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Name>Llumiserp</Name>
-                        <HP>40</HP>
-                        <FHP>40</FHP>
-                        <Attack>0</Attack>
-                        <DeathType>0</DeathType>
-                        <entrancemsg>slithered in!</entrancemsg>
-                        <deathmsg>became tame!</deathmsg>
-                        <OrderID>2</OrderID>
-                        <xtemp>0</xtemp>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Horizontal</movement>
-                                <wave>Sine</wave>
-                                <period>0.2</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>17</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="brightnessselect">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Value only</movement>
-                                <wave>Sine</wave>
-                                <period>1</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>75</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="Tint">
-                            <parameters>
-                                <blue>1</blue>
-                                <green>1</green>
-                                <red>1</red>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="Brightness">
-                            <parameters>
-                                <brightness>1</brightness>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>639</x>
-                        <y>235</y>
-                        <z>0</z>
-                        <width>233.131057739</width>
-                        <height>211.76071167</height>
-                        <depth>0</depth>
-                        <hotspotX>0.519444466</hotspotX>
-                        <hotspotY>0.492354751</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Llumiserp" uid="31">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Name>Llumiserp</Name>
-                        <HP>40</HP>
-                        <FHP>40</FHP>
-                        <Attack>0</Attack>
-                        <DeathType>0</DeathType>
-                        <entrancemsg>slithered in!</entrancemsg>
-                        <deathmsg>became tame!</deathmsg>
-                        <OrderID>1</OrderID>
-                        <xtemp>0</xtemp>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Horizontal</movement>
-                                <wave>Sine</wave>
-                                <period>0.2</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>17</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="brightnessselect">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Value only</movement>
-                                <wave>Sine</wave>
-                                <period>1</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>75</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="Tint">
-                            <parameters>
-                                <blue>1</blue>
-                                <green>1</green>
-                                <red>1</red>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="Brightness">
-                            <parameters>
-                                <brightness>1</brightness>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>225</x>
-                        <y>235</y>
-                        <z>0</z>
-                        <width>233.131057739</width>
-                        <height>211.76071167</height>
-                        <depth>0</depth>
-                        <hotspotX>0.519444466</hotspotX>
-                        <hotspotY>0.492354751</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="DmgIndicator" uid="36">
-                    <properties>
-                        <text>Text</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Impact,-32,700,0</font>
-                        <color>204,204,204</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>No</immovable>
-                                <collision-mask>Bounding box</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>5</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>1</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1071</x>
-                        <y>214</y>
-                        <z>0</z>
-                        <width>65.021156311</width>
-                        <height>50.09746933</height>
+                        <width>210</width>
+                        <height>166</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Escarghoul" uid="38">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Name>Escarghoul</Name>
-                        <HP>25</HP>
-                        <FHP>25</FHP>
-                        <Attack>0</Attack>
-                        <DeathType>0</DeathType>
-                        <entrancemsg>slithered in!</entrancemsg>
-                        <deathmsg>became tame!</deathmsg>
-                        <OrderID>3</OrderID>
-                        <xtemp>0</xtemp>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Sine">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Horizontal</movement>
-                                <wave>Sine</wave>
-                                <period>0.2</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>17</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="brightnessselect">
-                            <properties>
-                                <active-on-start>No</active-on-start>
-                                <movement>Value only</movement>
-                                <wave>Sine</wave>
-                                <period>1</period>
-                                <period-random>0</period-random>
-                                <period-offset>0</period-offset>
-                                <period-offset-random>0</period-offset-random>
-                                <magnitude>75</magnitude>
-                                <magnitude-random>0</magnitude-random>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="Tint">
-                            <parameters>
-                                <blue>1</blue>
-                                <green>1</green>
-                                <red>1</red>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="Brightness">
-                            <parameters>
-                                <brightness>1</brightness>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>429</x>
-                        <y>266</y>
-                        <z>0</z>
-                        <width>186</width>
-                        <height>126</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.420634925</hotspotY>
+                        <hotspotY>0.463855416</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
