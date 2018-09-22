@@ -608,7 +608,6 @@
                                                 </condition>
                                             </conditions>
                                             <actions>
-                                                <action id="-9" name="Destroy" sid="883520730197525" type="ProgressBar" />
                                                 <action id="-9" name="Set value" sid="526292179887177" type="System">
                                                     <param id="0" name="Variable">TURN</param>
                                                     <param id="1" name="Value">0</param>

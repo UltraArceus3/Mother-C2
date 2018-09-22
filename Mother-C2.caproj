@@ -20,16 +20,17 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
         <plugin author="R0J0hound" id="rojo_spritesheet" version="1">Sprite sheet</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Rex.Rainbow" id="Rex_Zigzag" version="1">Zigzag</behavior>
         <behavior author="Rex.Rainbow" id="Rex_text_resize" version="1">Text resize</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="lunarray" id="lunarray_LiteTween" version="1.700000048">LiteTween</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -323,14 +324,6 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
-            <object-type name="ProgressBar" sid="405294534382087">
-                <plugin id="progressbar" />
-                <behaviors>
-                    <behavior-type name="Sine" sid="118573740719982">
-                        <behavior id="Sin" />
-                    </behavior-type>
-                </behaviors>
-            </object-type>
         </object-folder>
         <object-folder name="System">
             <object-type name="Browser" sid="748945763486434">
@@ -558,6 +551,74 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="DreamyFlyingObject" sid="417622277241063">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="330822427771587" speed="5">
+                        <frame duration="1" hotspotX="0.464912" hotspotY="0.855932" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\KBGDUJS7\DFO[1].png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0.71631" />
+                                <point x="1" y="1" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="410220389666304" speed="5">
+                        <frame duration="1" hotspotX="0.471429" hotspotY="0.575472" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\FHPYN6CV\normalminionback[1].png">
+                            <collision-poly>
+                                <point x="0.357143" y="0.5" />
+                                <point x="0.471429" y="0.235849" />
+                                <point x="0.7" y="0.424528" />
+                                <point x="0.985714" y="0.575472" />
+                                <point x="0.928571" y="0.877358" />
+                                <point x="0.471429" y="0.990566" />
+                                <point x="0.0142857" y="0.877358" />
+                                <point x="0.0142857" y="0.575472" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Blues" sid="229802862080810">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="453694585320318" speed="5">
+                        <frame duration="1" hotspotX="0.508403" hotspotY="0.670732" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\FHPYN6CV\lady[1].png">
+                            <collision-poly>
+                                <point x="0.161723" y="0.00406504" />
+                                <point x="1" y="0.603759" />
+                                <point x="1" y="1" />
+                                <point x="1" y="1" />
+                                <point x="0.161723" y="1" />
+                                <point x="0.00420168" y="1" />
+                                <point x="0.00420168" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Rhythm" sid="882707088869855">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="371401317132421" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.741379" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\33ISKLBD\rhythm[1].png">
+                            <collision-poly>
+                                <point x="0.100906" y="0" />
+                                <point x="1" y="0.641163" />
+                                <point x="1" y="1" />
+                                <point x="1" y="1" />
+                                <point x="0.100906" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Asset_Loader">
             <object-type name="LoadProgressText" sid="818835270734579">
@@ -615,6 +676,9 @@
                 <behavior-type name="ScrollTo" sid="401762200796647">
                     <behavior id="scrollto" />
                 </behavior-type>
+                <behavior-type name="8Direction" sid="726123151435012">
+                    <behavior id="EightDir" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="270806322283257" speed="5">
@@ -624,6 +688,10 @@
         </object-type>
         <object-type name="EscarghoulOW" sid="340615072435938">
             <plugin id="Sprite" />
+            <container>
+                <type>EscarghoulOW</type>
+                <type>Enem_LoS</type>
+            </container>
             <animation-folder>
                 <animation framecount="2" loop="1" name="LeftD" pingpong="0" repeatcount="1" repeatto="0" sid="115413785150515" speed="5">
                     <frame duration="1" hotspotX="0.467213" hotspotY="0.207317" original-source="C:\Users\ranyk\AppData\Local\Microsoft\Windows\INetCache\IE\FHPYN6CV\snailoverworldanim1[1].png">
@@ -674,11 +742,23 @@
         <object-type name="Text" sid="665426585446942">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Sprite6" sid="355757767907839">
+        <object-type name="Enem_LoS" sid="355757767907839">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="LineOfSight" sid="791785418632933">
+                    <behavior id="LOS" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="183248506562712">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>EscarghoulOW</type>
+                <type>Enem_LoS</type>
+            </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="859833677285380" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.504" hotspotY="0.54" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -781,11 +861,14 @@
         </family>
         <family name="Enemies_BATTLE" plugin-id="Sprite" sid="484009580947593">
             <members>
+                <member>Blues</member>
                 <member>Candlestick</member>
                 <member>CandyDS</member>
+                <member>DreamyFlyingObject</member>
                 <member>Escarghoul</member>
                 <member>Llumiserp</member>
                 <member>Mesmire</member>
+                <member>Rhythm</member>
                 <member>Ruptree</member>
                 <member>Test_Enemy</member>
                 <member>Wickory</member>
@@ -824,9 +907,6 @@
                 <member>Player_OW</member>
             </members>
             <behaviors>
-                <behavior-type name="8Direction" sid="436051727512102">
-                    <behavior id="EightDir" />
-                </behavior-type>
                 <behavior-type name="Solid" sid="158551050631542">
                     <behavior id="solid" />
                 </behavior-type>
@@ -836,6 +916,15 @@
             <members>
                 <member>EscarghoulOW</member>
             </members>
+            <instance-variables>
+                <instance-variable name="LoS_ConeofView" sid="190450412805117" type="number" />
+                <instance-variable name="Speed" sid="782407401755058" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="CustomMovement" sid="742009884403360">
+                    <behavior id="custom" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>

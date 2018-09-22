@@ -73,7 +73,6 @@
                             <param id="0" name="Variable">TURN</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="497851364397760" type="ProgressBar" />
                     </actions>
                 </event-block>
             </sub-events>
