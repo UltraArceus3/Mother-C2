@@ -8,6 +8,9 @@
                 <condition id="-2" name="On start of layout" sid="337004707801210" type="System" />
             </conditions>
             <actions>
+                <action id="2" name="Remove item" sid="647986980207828" type="LocalStorage">
+                    <param id="0" name="Key">&quot;backfrombattle&quot;</param>
+                </action>
                 <action id="-3" name="Create object" sid="576232354029117" type="System">
                     <param id="0" name="Object to create">Background_Sheet</param>
                     <param id="1" name="Layer">0</param>
@@ -49,7 +52,7 @@
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="644775252036379" type="System">
-                    <param id="0" name="Layout">Battle</param>
+                    <param id="0" name="Layout">Overworld</param>
                 </action>
                 <action id="-9" name="Set value" sid="748955860115829" type="System">
                     <param id="0" name="Variable">Background</param>
@@ -114,6 +117,57 @@
             <actions>
                 <action id="-40" name="Set fullscreen scaling" sid="758601223547083" type="System">
                     <param id="0" name="Fullscreen scaling">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="999340220202859">
+            <conditions>
+                <condition id="-4" name="Trigger once while true" sid="342412917853566" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Assign nickname" sid="220973433090504" type="Nickname">
+                    <param id="0" name="Nickname">Blues.Name</param>
+                    <param id="1" name="Object">Blues</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="798353501861866" type="Nickname">
+                    <param id="0" name="Nickname">Candlestick.Name</param>
+                    <param id="1" name="Object">Candlestick</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="358415711585684" type="Nickname">
+                    <param id="0" name="Nickname">CandyDS.Name</param>
+                    <param id="1" name="Object">CandyDS</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="917842778863748" type="Nickname">
+                    <param id="0" name="Nickname">DreamyFlyingObject.Name</param>
+                    <param id="1" name="Object">DreamyFlyingObject</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="742427880631100" type="Nickname">
+                    <param id="0" name="Nickname">Escarghoul.Name</param>
+                    <param id="1" name="Object">Escarghoul</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="807609147226787" type="Nickname">
+                    <param id="0" name="Nickname">Llumiserp.Name</param>
+                    <param id="1" name="Object">Llumiserp</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="878685285546815" type="Nickname">
+                    <param id="0" name="Nickname">Mesmire.Name</param>
+                    <param id="1" name="Object">Mesmire</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="747838681605315" type="Nickname">
+                    <param id="0" name="Nickname">Rhythm.Name</param>
+                    <param id="1" name="Object">Rhythm</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="526657527494041" type="Nickname">
+                    <param id="0" name="Nickname">Ruptree.Name</param>
+                    <param id="1" name="Object">Ruptree</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="410881938032938" type="Nickname">
+                    <param id="0" name="Nickname">Test_Enemy.Name</param>
+                    <param id="1" name="Object">Test_Enemy</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="150105735247421" type="Nickname">
+                    <param id="0" name="Nickname">Wickory.Name</param>
+                    <param id="1" name="Object">Wickory</param>
                 </action>
             </actions>
         </event-block>

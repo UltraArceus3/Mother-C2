@@ -17,6 +17,8 @@
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="List" version="1">List</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Rex.Rainbow" id="Rex_Nickname" version="0.100000001">Nickname</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -25,9 +27,11 @@
     <used-behaviors>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
+        <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Rex.Rainbow" id="Rex_Zigzag" version="1">Zigzag</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_bNickname" version="1">Nickname</behavior>
         <behavior author="Rex.Rainbow" id="Rex_text_resize" version="1">Text resize</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
@@ -57,9 +61,9 @@
         <height>480</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
-    <preview-effects>1</preview-effects>
+    <preview-effects>0</preview-effects>
     <first-layout>Load_Assets</first-layout>
-    <use-loader-layout>1</use-loader-layout>
+    <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">No</prop>
         <prop name="Downscaling">Medium quality</prop>
@@ -71,7 +75,7 @@
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
-        <prop name="Preview browser">NW.js</prop>
+        <prop name="Preview browser">Edge</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
@@ -337,6 +341,9 @@
             </object-type>
             <object-type name="Function" sid="933528531579327">
                 <plugin id="Function" />
+            </object-type>
+            <object-type name="LocalStorage" sid="684686066896315">
+                <plugin id="LocalStorage" />
             </object-type>
         </object-folder>
         <object-folder name="Enemy_Sprites">
@@ -835,6 +842,17 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="EncColl" sid="728018854596109">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="828379814710607" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Nickname" sid="520915372582600">
+            <plugin id="Rex_Nickname" />
+        </object-type>
     </object-folder>
     <families>
         <family name="BattleButtons" plugin-id="Sprite" sid="990003021963795">
@@ -924,6 +942,9 @@
                 <behavior-type name="brightnessselect" sid="101582089757078">
                     <behavior id="Sin" />
                 </behavior-type>
+                <behavior-type name="Nickname" sid="686216595477406">
+                    <behavior id="Rex_bNickname" />
+                </behavior-type>
             </behaviors>
             <effects>
                 <effect-type name="Tint">
@@ -943,6 +964,9 @@
                 <behavior-type name="Solid" sid="158551050631542">
                     <behavior id="solid" />
                 </behavior-type>
+                <behavior-type name="Persist" sid="494081594124740">
+                    <behavior id="Persist" />
+                </behavior-type>
             </behaviors>
         </family>
         <family name="Enemies_OW" plugin-id="Sprite" sid="144549118688168">
@@ -950,8 +974,13 @@
                 <member>EscarghoulOW</member>
             </members>
             <instance-variables>
+                <instance-variable name="Name" sid="118407828746839" type="string" />
+                <instance-variable name="HP" sid="699647958811411" type="number" />
+                <instance-variable name="Attack" sid="382953604539040" type="number" />
+                <instance-variable name="DeathType" sid="796019509400947" type="number" />
                 <instance-variable name="LoS_ConeofView" sid="190450412805117" type="number" />
                 <instance-variable name="Speed" sid="782407401755058" type="number" />
+                <instance-variable name="Background" sid="272204601416214" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="CustomMovement" sid="742009884403360">
@@ -994,6 +1023,8 @@
         </global-instance>
         <global-instance type="Browser" uid="25" />
         <global-instance type="Function" uid="32" />
+        <global-instance type="Nickname" uid="56" />
+        <global-instance type="LocalStorage" uid="28" />
     </global-instances>
     <sounds-folder />
     <music-folder>

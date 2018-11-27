@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Assest-Loader ES</name>
+    <events>
+        <event-block sid="749781798207565">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="337004707801210" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="576232354029117" type="System">
+                    <param id="0" name="Object to create">Background_Sheet</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="891364490417492" type="System">
+                    <param id="0" name="Object to create">Background_Tile</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-3" name="Create object" sid="970721143975326" type="System">
+                    <param id="0" name="Object to create">Background_Sprite</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="646058386483460">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="938731287333616" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="611154157999029" type="LoadProgressText">
+                    <param id="0" name="Text">loadingprogress*100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="967616833605006">
+            <conditions>
+                <condition id="0" name="On clicked" sid="940027357132950" type="Button" />
+                <condition id="-8" name="Compare two values" sid="226269776964623" type="System">
+                    <param id="0" name="First value">loadingprogress*100</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="644775252036379" type="System">
+                    <param id="0" name="Layout">Battle</param>
+                </action>
+                <action id="-9" name="Set value" sid="748955860115829" type="System">
+                    <param id="0" name="Variable">Background</param>
+                    <param id="1" name="Value">List.SelectedIndex</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="924863836942002">
+            <conditions>
+                <condition id="1" name="Is checked" sid="983632737830087" type="FullScreen" />
+            </conditions>
+            <actions>
+                <action id="10" name="Request fullscreen" sid="463012691699115" type="Browser">
+                    <param id="0" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="417772965771584">
+            <conditions>
+                <condition id="1" inverted="1" name="Is checked" sid="483546052970898" type="FullScreen" />
+            </conditions>
+            <actions>
+                <action id="11" name="Cancel fullscreen" sid="728710081134741" type="Browser" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -493,6 +493,36 @@
                                 </action>
                             </actions>
                             <sub-events>
+                                <event-block disabled="1" sid="408380315429702">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="440259473377768" type="System">
+                                            <param id="0" name="Variable">EnemySelect</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">Enemies_BATTLE.Count-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="259254367253035" type="System">
+                                            <param id="0" name="Variable">EnemySelect</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="164141309983192">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="811351380711392" type="System">
+                                            <param id="0" name="Variable">EnemySelect</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="216616546681303" type="System">
+                                            <param id="0" name="Variable">EnemySelect</param>
+                                            <param id="1" name="Value">Enemies_BATTLE.Count-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="886802158728038">
                                     <conditions>
                                         <condition id="-4" name="Trigger once while true" sid="568449009843910" type="System" />
@@ -690,7 +720,9 @@
                                         <action id="-16" name="Wait" sid="776739651563339" type="System">
                                             <param id="0" name="Seconds">0.5</param>
                                         </action>
-                                        <action id="1" name="Close" sid="389548928269733" type="Browser" />
+                                        <action id="-2" name="Go to layout" sid="401325820380792" type="System">
+                                            <param id="0" name="Layout">Overworld</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>

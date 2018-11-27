@@ -42,6 +42,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Persist" />
                         <behavior-instance type="ScrollTo">
                             <properties>
                                 <initial-state>Enabled</initial-state>
@@ -82,8 +83,13 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Name>DFO</Name>
+                        <HP>50</HP>
+                        <Attack>0</Attack>
+                        <DeathType>0</DeathType>
                         <LoS_ConeofView>180</LoS_ConeofView>
                         <Speed>20</Speed>
+                        <Background>2</Background>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -91,6 +97,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Persist" />
                         <behavior-instance type="CustomMovement">
                             <properties>
                                 <stepping-mode>Linear</stepping-mode>
@@ -102,8 +109,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>536</x>
-                        <y>197</y>
+                        <x>511</x>
+                        <y>227</y>
                         <z>0</z>
                         <width>47.61000061</width>
                         <height>32</height>
@@ -122,8 +129,13 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Name>Mesmire</Name>
+                        <HP>10</HP>
+                        <Attack>0</Attack>
+                        <DeathType>0</DeathType>
                         <LoS_ConeofView>180</LoS_ConeofView>
                         <Speed>0</Speed>
+                        <Background>0</Background>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -131,6 +143,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Persist" />
                         <behavior-instance type="CustomMovement">
                             <properties>
                                 <stepping-mode>Linear</stepping-mode>
@@ -211,8 +224,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>743</x>
-                        <y>161</y>
+                        <x>690</x>
+                        <y>151</y>
                         <z>0</z>
                         <width>94</width>
                         <height>96</height>
@@ -221,6 +234,28 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EncColl" uid="38">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-157</x>
+                        <y>170</y>
+                        <z>0</z>
+                        <width>250</width>
+                        <height>250</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.200000003</opacity>
                     </world>
                 </instance>
             </instances>

@@ -90,8 +90,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>462</x>
-                        <y>24</y>
+                        <x>695</x>
+                        <y>4</y>
                         <z>0</z>
                         <width>1001</width>
                         <height>565</height>
@@ -350,6 +350,12 @@
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Nickname">
+                            <properties>
+                                <nickname></nickname>
+                                <mode>Manual</mode>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Tint">
@@ -422,6 +428,12 @@
                                 <period-offset-random>0</period-offset-random>
                                 <magnitude>75</magnitude>
                                 <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Nickname">
+                            <properties>
+                                <nickname></nickname>
+                                <mode>Manual</mode>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -596,6 +608,12 @@
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Nickname">
+                            <properties>
+                                <nickname></nickname>
+                                <mode>Manual</mode>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Tint">
@@ -668,6 +686,12 @@
                                 <period-offset-random>0</period-offset-random>
                                 <magnitude>75</magnitude>
                                 <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Nickname">
+                            <properties>
+                                <nickname>Escarghoul</nickname>
+                                <mode>Manual</mode>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -744,6 +768,12 @@
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Nickname">
+                            <properties>
+                                <nickname></nickname>
+                                <mode>Manual</mode>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Tint">
@@ -818,6 +848,12 @@
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Nickname">
+                            <properties>
+                                <nickname></nickname>
+                                <mode>Manual</mode>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Tint">
@@ -869,8 +905,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>764.949890137</x>
-                        <y>1193.543945313</y>
+                        <x>-895</x>
+                        <y>921</y>
                         <z>0</z>
                         <width>250</width>
                         <height>250</height>
@@ -923,6 +959,12 @@
                                 <period-offset-random>0</period-offset-random>
                                 <magnitude>75</magnitude>
                                 <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Nickname">
+                            <properties>
+                                <nickname></nickname>
+                                <mode>Manual</mode>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -999,6 +1041,12 @@
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Nickname">
+                            <properties>
+                                <nickname></nickname>
+                                <mode>Manual</mode>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Tint">
@@ -1073,6 +1121,12 @@
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Nickname">
+                            <properties>
+                                <nickname></nickname>
+                                <mode>Manual</mode>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Tint">
@@ -1099,6 +1153,45 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.741379321</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="31">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <effect-instances>
+                        <effect-instance type="Warp">
+                            <parameters>
+                                <x-amplitude>5</x-amplitude>
+                                <x-frequency>25</x-frequency>
+                                <x-speed>1</x-speed>
+                                <y-amplitude>5</y-amplitude>
+                                <y-frequency>25</y-frequency>
+                                <y-speed>1</y-speed>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="Glass">
+                            <parameters>
+                                <density>2</density>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>856</x>
+                        <y>481</y>
+                        <z>0</z>
+                        <width>1922</width>
+                        <height>1042</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1313,6 +1406,12 @@
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Nickname">
+                            <properties>
+                                <nickname></nickname>
+                                <mode>Manual</mode>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="Tint">
@@ -1385,6 +1484,12 @@
                                 <period-offset-random>0</period-offset-random>
                                 <magnitude>75</magnitude>
                                 <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Nickname">
+                            <properties>
+                                <nickname></nickname>
+                                <mode>Manual</mode>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>

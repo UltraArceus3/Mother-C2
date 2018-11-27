@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Enemy-Battle</name>
     <events>
+        <variable constant="0" name="deathorderid" sid="354848951001480" static="0" type="number">-1</variable>
         <event-block sid="763412240938044">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="429587323115259" type="Enemies_BATTLE">
@@ -13,6 +14,10 @@
                 <condition id="-4" name="Trigger once while true" sid="439969321163802" type="System" />
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="715718524078820" type="System">
+                    <param id="0" name="Variable">deathorderid</param>
+                    <param id="1" name="Value">Enemies_BATTLE.OrderID</param>
+                </action>
                 <action id="-28" name="Set effect parameter" sid="668566306715777" type="Enemies_BATTLE">
                     <param id="0" name="Effect">&quot;Brightness&quot;</param>
                     <param id="1" name="Parameter index">0</param>
@@ -115,6 +120,21 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="374620710693349">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="729094146260840" type="System">
+                    <param id="0" name="Variable">deathorderid</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">Enemies_BATTLE.OrderID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="486502515367492" type="Enemies_BATTLE">
+                    <param id="0" name="Instance variable">OrderID</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="767493839373717">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="443016862230302" type="System">
@@ -126,6 +146,11 @@
                     <param id="0" name="Variable">TURN</param>
                     <param id="1" name="Comparison">1</param>
                     <param id="2" name="Value">-3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="314201573483119" type="System">
+                    <param id="0" name="Variable">TURN</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">-1</param>
                 </condition>
             </conditions>
             <actions>
