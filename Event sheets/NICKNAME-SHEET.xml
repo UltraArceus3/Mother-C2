@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>NICKNAME-SHEET</name>
+    <events>
+        <event-block sid="431559903398780">
+            <conditions>
+                <condition id="-4" name="Trigger once while true" sid="536677664922047" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Assign nickname" sid="620107306334599" type="Nickname">
+                    <param id="0" name="Nickname">Blues.Name</param>
+                    <param id="1" name="Object">Blues</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="503651255933574" type="Nickname">
+                    <param id="0" name="Nickname">Candlestick.Name</param>
+                    <param id="1" name="Object">Candlestick</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="240077875132877" type="Nickname">
+                    <param id="0" name="Nickname">CandyDS.Name</param>
+                    <param id="1" name="Object">CandyDS</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="520140271228149" type="Nickname">
+                    <param id="0" name="Nickname">DreamyFlyingObject.Name</param>
+                    <param id="1" name="Object">DreamyFlyingObject</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="179442815291747" type="Nickname">
+                    <param id="0" name="Nickname">Escarghoul.Name</param>
+                    <param id="1" name="Object">Escarghoul</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="647750375675944" type="Nickname">
+                    <param id="0" name="Nickname">Llumiserp.Name</param>
+                    <param id="1" name="Object">Llumiserp</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="269287928867962" type="Nickname">
+                    <param id="0" name="Nickname">Mesmire.Name</param>
+                    <param id="1" name="Object">Mesmire</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="483902687627496" type="Nickname">
+                    <param id="0" name="Nickname">Rhythm.Name</param>
+                    <param id="1" name="Object">Rhythm</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="174915099901333" type="Nickname">
+                    <param id="0" name="Nickname">Ruptree.Name</param>
+                    <param id="1" name="Object">Ruptree</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="347236334075524" type="Nickname">
+                    <param id="0" name="Nickname">Test_Enemy.Name</param>
+                    <param id="1" name="Object">Test_Enemy</param>
+                </action>
+                <action id="1" name="Assign nickname" sid="304570895643080" type="Nickname">
+                    <param id="0" name="Nickname">Wickory.Name</param>
+                    <param id="1" name="Object">Wickory</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -701,7 +701,14 @@
                 <behavior-type name="8Direction" sid="726123151435012">
                     <behavior id="EightDir" />
                 </behavior-type>
+                <behavior-type name="Persist" sid="134005703327161">
+                    <behavior id="Persist" />
+                </behavior-type>
             </behaviors>
+            <container>
+                <type>Player_OW</type>
+                <type>Sprite6</type>
+            </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="270806322283257" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -853,6 +860,26 @@
         <object-type name="Nickname" sid="520915372582600">
             <plugin id="Rex_Nickname" />
         </object-type>
+        <object-type name="Sprite6" sid="643581566534689">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="317840312589141">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="Persist" sid="227645271472437">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Player_OW</type>
+                <type>Sprite6</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="814397877293958" speed="5">
+                    <frame duration="1" hotspotX="0.492" hotspotY="-0.012" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="BattleButtons" plugin-id="Sprite" sid="990003021963795">
@@ -958,8 +985,11 @@
         <family name="OverworldEntities" plugin-id="Sprite" sid="534461328910477">
             <members>
                 <member>EscarghoulOW</member>
-                <member>Player_OW</member>
+                <member>sprite_</member>
             </members>
+            <instance-variables>
+                <instance-variable name="interact" sid="363952818559486" type="string" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="158551050631542">
                     <behavior id="solid" />
@@ -981,6 +1011,7 @@
                 <instance-variable name="LoS_ConeofView" sid="190450412805117" type="number" />
                 <instance-variable name="Speed" sid="782407401755058" type="number" />
                 <instance-variable name="Background" sid="272204601416214" type="number" />
+                <instance-variable name="Enc" sid="318948772513164" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="CustomMovement" sid="742009884403360">
@@ -1004,6 +1035,8 @@
         <event-sheet>Battle-Functions.xml</event-sheet>
         <event-sheet>Overworld ES.xml</event-sheet>
         <event-sheet>Enemy-OW.xml</event-sheet>
+        <event-sheet>Player-OW.xml</event-sheet>
+        <event-sheet>NICKNAME-SHEET.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="18" />

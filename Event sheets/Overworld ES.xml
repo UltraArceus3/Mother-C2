@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Overworld ES</name>
     <events>
+        <include>Player-OW</include>
         <include>Enemy-OW</include>
         <event-block sid="678507204049613">
             <conditions>
@@ -22,42 +23,18 @@
                 <condition id="0" name="On collision with another object" sid="416983041747710" type="Player_OW">
                     <param id="0" name="Object">Enemies_OW</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="888709600833511" type="Enemies_OW">
+                    <param id="0" name="Instance variable">Enc</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
-                <action behavior="8Direction" id="8" name="Set enabled" sid="484473519574504" type="Player_OW">
-                    <param id="0" name="State">0</param>
+                <action id="0" name="Call function" sid="848408644979648" type="Function">
+                    <param id="0" name="Name">&quot;Battle-Encounter&quot;</param>
+                    <param id="1" name="Parameter {n}">Enemies_OW.Name{###}Enemies_OW.HP{###}Enemies_OW.Background</param>
                 </action>
-                <action id="0" name="Spawn another object" sid="219786053239194" type="Player_OW">
-                    <param id="0" name="Object">EncColl</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="-7" name="Set size" sid="998277407608382" type="EncColl">
-                    <param id="0" name="Width">Player_OW.Width*2</param>
-                    <param id="1" name="Height">Player_OW.Height*2</param>
-                </action>
-                <action id="3" name="Set at XY" sid="408871115653666" type="EnemyBattle">
-                    <param id="0" name="X">0</param>
-                    <param id="1" name="Y">0</param>
-                    <param id="2" name="Value">Enemies_OW.Name</param>
-                </action>
-                <action id="3" name="Set at XY" sid="929492844009909" type="EnemyBattle">
-                    <param id="0" name="X">1</param>
-                    <param id="1" name="Y">0</param>
-                    <param id="2" name="Value">Enemies_OW.HP</param>
-                </action>
-                <action id="-9" name="Set value" sid="220210130696321" type="System">
-                    <param id="0" name="Variable">Background</param>
-                    <param id="1" name="Value">Enemies_OW.Background</param>
-                </action>
-                <action id="-16" name="Wait" sid="439165649118929" type="System">
-                    <param id="0" name="Seconds">0.5</param>
-                </action>
-                <action id="0" name="Call function" sid="312480024528221" type="Function">
-                    <param id="0" name="Name">&quot;InitiateBattle&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-                <action id="-10" name="Set value" sid="681924747405085" type="Enemies_OW">
+                <action id="-10" name="Set value" sid="590272178682520" type="Enemies_OW">
                     <param id="0" name="Instance variable">HP</param>
                     <param id="1" name="Value">0</param>
                 </action>
@@ -98,6 +75,10 @@
                 <condition id="-2" name="On start of layout" sid="586457720783436" type="System" />
             </conditions>
             <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="700152523672053" type="Sprite6">
+                    <param id="0" name="Pin to">Player_OW</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
                 <action id="-9" name="Set value" sid="732663681157633" type="System">
                     <param id="0" name="Variable">TURN</param>
                     <param id="1" name="Value">-1</param>
@@ -113,6 +94,48 @@
                 <action id="-9" name="Set value" sid="726611848426547" type="System">
                     <param id="0" name="Variable">runloopflash</param>
                     <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="282221267091944">
+            <conditions>
+                <condition id="0" name="On function" sid="420959860979944" type="Function">
+                    <param id="0" name="Name">&quot;Battle-Encounter&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="336109949141351" type="Player_OW">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="625965719543832" type="Player_OW">
+                    <param id="0" name="Object">EncColl</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="701193404679548" type="EncColl">
+                    <param id="0" name="Width">Player_OW.Width*2</param>
+                    <param id="1" name="Height">Player_OW.Height*2</param>
+                </action>
+                <action id="3" name="Set at XY" sid="193109869909896" type="EnemyBattle">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">Function.Param(0)</param>
+                </action>
+                <action id="3" name="Set at XY" sid="118287381583313" type="EnemyBattle">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">Function.Param(1)</param>
+                </action>
+                <action id="-9" name="Set value" sid="934243291442488" type="System">
+                    <param id="0" name="Variable">Background</param>
+                    <param id="1" name="Value">Function.Param(2)</param>
+                </action>
+                <action id="-16" name="Wait" sid="682309476275747" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="0" name="Call function" sid="302067573852825" type="Function">
+                    <param id="0" name="Name">&quot;InitiateBattle&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>

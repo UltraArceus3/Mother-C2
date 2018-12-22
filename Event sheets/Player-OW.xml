@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Player-OW</name>
+    <events>
+        <event-block sid="970719678552559">
+            <conditions>
+                <condition id="2" name="Key is down" sid="901315804989690" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="598612520266784" type="Sprite6">
+                    <param id="0" name="Angle">180</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="639947260766932">
+            <conditions>
+                <condition id="2" name="Key is down" sid="557234273431235" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="632262318443931" type="Sprite6">
+                    <param id="0" name="Angle">90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="725425665525441">
+            <conditions>
+                <condition id="2" name="Key is down" sid="704332258648492" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="449910752023569" type="Sprite6">
+                    <param id="0" name="Angle">270</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="447300798284767">
+            <conditions>
+                <condition id="2" name="Key is down" sid="256491333218158" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="400577570884838" type="Sprite6">
+                    <param id="0" name="Angle">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="962291190982411">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="136495764084469" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="917277598786273" type="Sprite6">
+                    <param id="0" name="Object">OverworldEntities</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="783185588243502" type="Text">
+                    <param id="0" name="Text">left(OverworldEntities.interact, len(Text.Text) + 1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="987695999992762">
+            <conditions>
+                <condition id="0" name="On function" sid="493622063491030" type="Function">
+                    <param id="0" name="Name">&quot;text-print&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="210849893953051">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="915091712882205" type="System">
+                            <param id="0" name="Interval (seconds)">0.87</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
