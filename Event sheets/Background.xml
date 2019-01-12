@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Background</name>
     <events>
+        <variable constant="0" name="x" sid="690918735094241" static="0" type="number">0</variable>
         <variable constant="0" name="debug" sid="543853113437847" static="0" type="number">0</variable>
         <variable constant="0" name="Background" sid="630814047730786" static="0" type="number">2</variable>
         <event-block sid="112216484189240">
